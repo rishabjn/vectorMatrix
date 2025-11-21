@@ -1,0 +1,66 @@
+# -----------------------------
+# Python / Flask Backend
+# -----------------------------
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+instance/
+.env
+*.env
+
+
+# Flask logs
+*.log
+
+# -----------------------------
+# macOS
+# -----------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# -----------------------------
+# Vite + React Frontend
+# -----------------------------
+node_modules/
+dist/
+build/
+*.local
+
+# Vite cache
+.vite/
+
+# React cache
+.cache/
+*.cache
+
+# Edited files backups
+*.swp
+*.swo
+
+# IDE specific
+.vscode/
+.idea/
+*.iml
+
+# -----------------------------
+# Logs
+# -----------------------------
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# -----------------------------
+# Temporary
+# -----------------------------
+tmp/
+temp/
+*.tmp
+*.bak
+*.old

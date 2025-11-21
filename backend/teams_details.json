@@ -1,0 +1,58 @@
+[
+  {
+    "documents": [
+      "https://www.reddit.com/r/pic_programming/new/",
+      "google.com"
+    ],
+    "email": "rishab@gmail.com",
+    "full_name": "Rishab Jain",
+    "id": "92dccc2d-5227-470b-8eba-22067a62b246",
+    "manager_name": "SP",
+    "team_name": "Melody"
+  },
+  {
+    "documents": [
+      "https://claude.ai/chat"
+    ],
+    "email": "ar@gamil.com",
+    "full_name": "Arpita",
+    "id": "f0d23820-0fc5-4632-bd94-74ef56851985",
+    "manager_name": "xyz abc",
+    "team_name": "Devlopment tool"
+  },
+  {
+    "documents": [
+      "https://forum.microchip.com/s/topic/a5CV40000000KRlMAM/t393938",
+      "https://forum.microchip.com/s/?&page=1&offset=0&filters=false&selectedlist=section1&followingtopics=false&myforums=false&myactivity=false"
+    ],
+    "email": "a@gamil.com",
+    "full_name": "Archana ",
+    "id": "70d2515c-8960-4224-aa87-402651959daa",
+    "manager_name": "J",
+    "team_name": "xyz/abc"
+  },
+  {
+    "documents": [
+      "https://forum.microchip.com/s/?&page=1&offset=0&filters=false&selectedlist=section1&followingtopics=false&myforums=false&myactivity=false",
+      "https://sbert.net/"
+    ],
+    "email": "nadeem.u@gmail.com",
+    "full_name": "Nadeem U",
+    "id": "1a573ec5-933e-4485-a63f-b85a39619200",
+    "manager_name": "SJ",
+    "team_name": "AI Chatbot"
+  },
+  {
+    "full_name": "Test",
+    "email": "test",
+    "team_name": "jzjz",
+    "manager_name": "fdvfkv",
+    "documents": [
+      "asms",
+      "ajsnd",
+      "dnfjnf",
+      "dnjfnjf"
+    ],
+    "id": "fc57e747-b8b9-4926-9e2f-fcefcf50f84b"
+  }
+]
