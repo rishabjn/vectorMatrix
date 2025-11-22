@@ -160,8 +160,6 @@ vector-matrix/
 - Add charts and graphs for score trends
 - Add authentication and roles
 - Add Slack/email notifications
-- Use PostgreSQL or MongoDB instead of JSON
-- Deploy to cloud
 
 ---
 

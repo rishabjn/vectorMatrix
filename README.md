@@ -239,8 +239,3 @@ pip install sentence-transformers
 ```
 npm install @vitejs/plugin-react
 ```
-
----
-
-# 🎉 You're Ready!
-VectorMatrix is fully operational with Teams + Queries + Matching + Dashboard + Ranking.
