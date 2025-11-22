@@ -1,119 +1,353 @@
-from flask import Flask, request, jsonify
-import json, uuid, threading
-from flask_cors import CORS
+import json
+import uuid
+import threading
 from pathlib import Path
+from flask import Flask, request, jsonify
+from flask_cors import CORS
+from sentence_transformers import SentenceTransformer
+import numpy as np
+
+# -------------------------------------------------
+# Paths & Setup
+# -------------------------------------------------
+BASE = Path(__file__).resolve().parent
+
+DB_FILE = BASE / "teams_details.json"
+PROCESSED_FILE = BASE / "team_processed_details.json"
+
+QUERIES_RAW_FILE = BASE / "queries_raw.json"
+QUERIES_PROCESSED_FILE = BASE / "queries_processed.json"
+MATCH_RESULTS_FILE = BASE / "match_results.json"
+
+LOCK = threading.Lock()
 
 app = Flask(__name__)
 CORS(app)
 
-DB_FILE = Path("teams_details.json")
-LOCK = threading.Lock()
+# Load SBERT model
+print("Loading SBERT model...")
+model = SentenceTransformer("all-MiniLM-L6-v2")
+print("SBERT loaded.")
 
-def read_db():
+# -------------------------------------------------
+# Safe JSON Helpers
+# -------------------------------------------------
+def safe_read(path: Path):
     with LOCK:
-        if not DB_FILE.exists():
-            DB_FILE.write_text("[]")
-        return json.loads(DB_FILE.read_text())
+        if not path.exists():
+            path.write_text("[]")
+        return json.loads(path.read_text())
 
-def write_db(data):
+def safe_write(path: Path, data):
     with LOCK:
-        DB_FILE.write_text(json.dumps(data, indent=2))
+        path.write_text(json.dumps(data, indent=2))
 
-def read_processed():
-    f = Path("team_processed_details.json")
-    with LOCK:
-        if not f.exists():
-            f.write_text("[]")
-        return json.loads(f.read_text())
+# -------------------------------------------------
+# Keyword Extraction Rules
+# -------------------------------------------------
+SKILL_KEYWORDS = {
+    "c": [" c ", "c language"],
+    "c++": ["c++", "cpp"],
+    "embedded": ["embedded", "firmware"],
+    "linux": ["linux"],
+    "testing": ["testing", "unit test"],
+}
 
-def write_processed(data):
-    with LOCK:
-        Path("team_processed_details.json").write_text(json.dumps(data, indent=2))
+TOOL_KEYWORDS = {
+    "mplab": ["mplab", "mplab x"],
+    "icd": ["icd3", "icd4"],
+    "git": ["git", "github"],
+}
 
-# -----------------------------
-#  PREPROCESSING LOGIC
-# -----------------------------
-def preprocess_team(raw_team):
-    processed = {
-        "id": raw_team["id"],
-        "team_name_upper": raw_team["team_name"].upper(),
-        "owner_short": raw_team["full_name"].split()[0],
-        "email_domain": raw_team["email"].split("@")[-1],
-        "manager_is_owner": raw_team["manager_name"].lower() == raw_team["full_name"].lower(),
-        "documents_count": len(raw_team["documents"])
+WORK_AREA_KEYWORDS = {
+    "development_tools": ["ide", "development tools"],
+    "hardware": ["schematic", "pcb"],
+}
+
+def extract_entities(text):
+    if not text:
+        return {"skills": [], "tools": [], "work_areas": []}
+
+    txt = text.lower()
+
+    def find_keys(map_):
+        results = set()
+        for key, vals in map_.items():
+            for v in vals:
+                if v in txt:
+                    results.add(key)
+        return sorted(results)
+
+    return {
+        "skills": find_keys(SKILL_KEYWORDS),
+        "tools": find_keys(TOOL_KEYWORDS),
+        "work_areas": find_keys(WORK_AREA_KEYWORDS),
     }
-    return processed
 
+# -------------------------------------------------
+# Embedding Helper
+# -------------------------------------------------
+def embed_text(text):
+    emb = model.encode(text, show_progress_bar=False)
+    return emb.tolist()
 
-# -----------------------------
-#  API ROUTES
-# -----------------------------
-@app.get("/api/teams")
-def get_all():
-    return jsonify(read_db())
+# -------------------------------------------------
+# TEAM PROCESSING
+# -------------------------------------------------
+def preprocess_team(raw):
+    parts = [
+        raw.get("team_name", ""),
+        raw.get("full_name", ""),
+        raw.get("manager_name", "")
+    ]
 
-@app.post("/api/teams")
-def create():
-    data = request.json
+    docs = raw.get("documents", [])
+    parts.extend(docs)
 
-    new_team = {**data, "id": str(uuid.uuid4())}
+    text_blob = " | ".join([p for p in parts if p])
+
+    entities = extract_entities(text_blob)
+    emb = embed_text(text_blob)
+
+    return {
+        "id": raw["id"],
+        "team_name": raw.get("team_name"),
+        "owner": raw.get("full_name"),
+        "manager": raw.get("manager_name"),
+        "skills": entities["skills"],
+        "tools": entities["tools"],
+        "work_areas": entities["work_areas"],
+        "embedding": emb
+    }
+
+# -------------------------------------------------
+# TEAM ROUTES (GET + POST merged to prevent 405)
+# -------------------------------------------------
+@app.route("/api/teams", methods=["GET", "POST"])
+def teams_handler():
+    if request.method == "GET":
+        return jsonify(safe_read(DB_FILE))
+
+    # POST: Add new team
+    body = request.json or {}
+
+    tid = str(uuid.uuid4())
+    raw_team = {
+        "id": tid,
+        "full_name": body.get("full_name"),
+        "email": body.get("email"),
+        "team_name": body.get("team_name"),
+        "manager_name": body.get("manager_name"),
+        "documents": body.get("documents", []),
+    }
 
     # Save raw
-    db = read_db()
-    db.append(new_team)
-    write_db(db)
-
-    # Preprocess
-    processed = preprocess_team(new_team)
+    raw_db = safe_read(DB_FILE)
+    raw_db.append(raw_team)
+    safe_write(DB_FILE, raw_db)
 
     # Save processed
-    proc = read_processed()
+    processed = preprocess_team(raw_team)
+    proc_db = safe_read(PROCESSED_FILE)
+    proc_db.append(processed)
+    safe_write(PROCESSED_FILE, proc_db)
+
+    return jsonify({"raw": raw_team, "processed": processed}), 201
+
+@app.get("/api/teams/processed")
+def get_processed_teams():
+    return jsonify(safe_read(PROCESSED_FILE))
+
+# -------------------------------------------------
+# QUERY INGESTION (RAW)
+# -------------------------------------------------
+@app.post("/api/queries")
+def ingest_query():
+    body = request.json or {}
+
+    qid = "q-" + str(uuid.uuid4())
+    item = {
+        "id": qid,
+        "title": body.get("title", ""),
+        "content": body.get("content", ""),
+        "source": body.get("source", "unknown"),
+        "url": body.get("url", ""),
+        "timestamp": body.get("timestamp"),
+        "comments_count": body.get("comments_count", 0)
+    }
+
+    raw_q = safe_read(QUERIES_RAW_FILE)
+    raw_q.append(item)
+    safe_write(QUERIES_RAW_FILE, raw_q)
+
+    return jsonify(item), 201
+
+# -------------------------------------------------
+# QUERY PROCESSING (Embedding)
+# -------------------------------------------------
+@app.post("/api/queries/process/<qid>")
+def process_query(qid):
+    raw = safe_read(QUERIES_RAW_FILE)
+    item = next((q for q in raw if q["id"] == qid), None)
+    if not item:
+        return jsonify({"error": "query not found"}), 404
+
+    text_blob = f"{item['title']} . {item['content']}"
+    emb = embed_text(text_blob)
+
+    processed = {
+        "id": qid,
+        "clean_text": text_blob.lower(),
+        "keywords": extract_entities(text_blob)["skills"],
+        "embedding": emb
+    }
+
+    proc = safe_read(QUERIES_PROCESSED_FILE)
     proc.append(processed)
-    write_processed(proc)
+    safe_write(QUERIES_PROCESSED_FILE, proc)
 
-    return jsonify({"raw": new_team, "processed": processed}), 201
+    return jsonify(processed), 201
+
+# -------------------------------------------------
+# MATCHING ENGINE
+# -------------------------------------------------
+@app.post("/api/match/<qid>")
+def match_query(qid):
+    qlist = safe_read(QUERIES_PROCESSED_FILE)
+    q = next((x for x in qlist if x["id"] == qid), None)
+    if not q:
+        return jsonify({"error": "query not processed yet"}), 400
+
+    q_emb = np.array(q["embedding"])
+    teams = safe_read(PROCESSED_FILE)
+
+    if not teams:
+        return jsonify({"error": "no teams in database"}), 400
+
+    matches = []
+    for t in teams:
+        t_emb = np.array(t["embedding"])
+        sim = float(np.dot(q_emb, t_emb) / (np.linalg.norm(q_emb) * np.linalg.norm(t_emb)))
+        matches.append({
+            "team_id": t["id"],
+            "team_name": t["team_name"],
+            "score": sim
+        })
+
+    best = max(matches, key=lambda x: x["score"])
+
+    # save match
+    results = safe_read(MATCH_RESULTS_FILE)
+    results.append({
+        "query_id": qid,
+        "team_id": best["team_id"],
+        "score": best["score"]
+    })
+    safe_write(MATCH_RESULTS_FILE, results)
+
+    return jsonify({
+        "best_team": best,
+        "ranking": sorted(matches, key=lambda x: x["score"], reverse=True)
+    })
+
+# -------------------------------------------------
+# DASHBOARD ROUTES
+# -------------------------------------------------
+@app.get("/api/dashboard/matches")
+def dashboard_matches():
+    matches = safe_read(MATCH_RESULTS_FILE)
+    queries = safe_read(QUERIES_RAW_FILE)
+    teams = safe_read(PROCESSED_FILE)
+
+    results = []
+    for m in matches:
+        q = next((x for x in queries if x["id"] == m["query_id"]), None)
+        t = next((x for x in teams if x["id"] == m["team_id"]), None)
+
+        if q and t:
+            results.append({
+                "query_id": q["id"],
+                "query_title": q["title"],
+                "team_id": t["id"],
+                "team_name": t["team_name"],
+                "score": m["score"]
+            })
+
+    return jsonify(results)
+
+@app.get("/api/dashboard/rankings/<qid>")
+def full_ranking(qid):
+    q_list = safe_read(QUERIES_PROCESSED_FILE)
+    q = next((x for x in q_list if x["id"] == qid), None)
+    if not q:
+        return jsonify({"error": "query not processed"}), 400
+
+    q_emb = np.array(q["embedding"])
+    t_list = safe_read(PROCESSED_FILE)
+
+    results = []
+    for t in t_list:
+        t_emb = np.array(t["embedding"])
+        sim = float(np.dot(q_emb, t_emb) / (np.linalg.norm(q_emb) * np.linalg.norm(t_emb)))
+
+        results.append({
+            "team_id": t["id"],
+            "team_name": t["team_name"],
+            "score": sim
+        })
+
+    results.sort(key=lambda x: x["score"], reverse=True)
+    return jsonify(results)
 
 
-@app.get("/api/team/<id>")
-def get_one(id):
-    for t in read_db():
-        if t["id"] == id:
-            return jsonify(t)
-    return jsonify({"error":"not found"}),404
 
+@app.get("/api/queries/raw")
+def get_queries_raw():
+    return jsonify(safe_read(QUERIES_RAW_FILE))
 
-@app.put("/api/team/<id>")
-def update(id):
-    db = read_db()
-    for i,t in enumerate(db):
-        if t["id"] == id:
-            db[i] = {**request.json, "id": id}
-            write_db(db)
-            return jsonify(db[i])
-    return jsonify({"error":"not found"}),404
+@app.get("/api/queries/processed")
+def get_queries_processed():
+    return jsonify(safe_read(QUERIES_PROCESSED_FILE))
 
+@app.get("/api/matches")
+def get_matches():
+    return jsonify(safe_read(MATCH_RESULTS_FILE))
 
-@app.delete("/api/team/<id>")
-def delete(id):
-    db = read_db()
-    db = [t for t in db if t["id"] != id]
-    write_db(db)
-    return jsonify({"status":"deleted"})
+@app.get("/api/team/<tid>")
+def get_single_team(tid):
+    teams = safe_read(DB_FILE)
+    team = next((t for t in teams if t["id"] == tid), None)
+    if team:
+        return jsonify(team)
+    return jsonify({"error": "team not found"}), 404
 
+@app.get("/api/team/processed/<tid>")
+def get_single_team_processed(tid):
+    teams = safe_read(PROCESSED_FILE)
+    team = next((t for t in teams if t["id"] == tid), None)
+    if team:
+        return jsonify(team)
+    return jsonify({"error": "team not found"}), 404
 
-# New processed data endpoints
-@app.get("/api/processed")
-def get_processed():
-    return jsonify(read_processed())
+# -------------------------------------------------
+# HEALTH CHECK
+# -------------------------------------------------
+@app.get("/api/health")
+def health():
+    return {"ok": True}
 
+# -------------------------------------------------
+# MAIN
+# -------------------------------------------------
+if __name__ == "__main__":
+    for p in [
+        DB_FILE,
+        PROCESSED_FILE,
+        QUERIES_RAW_FILE,
+        QUERIES_PROCESSED_FILE,
+        MATCH_RESULTS_FILE
+    ]:
+        if not p.exists():
+            p.write_text("[]")
 
-@app.get("/api/processed/<id>")
-def get_processed_one(id):
-    for item in read_processed():
-        if item["id"] == id:
-            return jsonify(item)
-    return jsonify({"error":"not found"}),404
-
-
-if __name__=="__main__":
     app.run(debug=True)

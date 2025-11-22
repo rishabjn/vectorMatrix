@@ -4,6 +4,8 @@ import Home from "./pages/Home";
 import Teams from "./pages/Teams";
 import ViewTeam from "./pages/ViewTeam";
 import EditTeam from "./pages/EditTeam";
+import Dashboard from "./pages/Dashboard";
+import Ranking from "./pages/Ranking"
 
 export default function App() {
   return (
@@ -15,6 +17,9 @@ export default function App() {
           <Route path="/teams" element={<Teams />} />
           <Route path="/team/:id" element={<ViewTeam />} />
           <Route path="/team/:id/edit" element={<EditTeam />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/ranking/:qid" element={<Ranking />} />
+
         </Routes>
       </main>
     </HashRouter>

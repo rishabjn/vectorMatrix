@@ -1,31 +1,94 @@
-# VectorMatrix – Team Details Management System
+# VectorMatrix – AI Driven Query-to-Team Matching System
 
-VectorMatrix is a full-stack project built using:
+VectorMatrix is a full-stack ML-powered system designed to automatically match incoming technical queries from public forums (Reddit, Microchip forums, etc.) to the most suitable internal engineering teams using SBERT embeddings and cosine similarity.  
+It includes:
 
-- **React (Vite)** – Single Page Application (SPA)
-- **Flask (Python)** – REST API backend
-- **JSON Database** – Lightweight storage for:
-  - Raw team details (`teams_details.json`)
-  - Processed team details (`team_processed_details.json`)
-
-When a user submits team details through the UI, the backend **automatically preprocesses** them and stores both raw and transformed data.
+- React (Vite) Frontend  
+- Flask Backend  
+- SBERT Embedding Model  
+- Fully automated query → team matching  
+- Dashboard + Full Ranking UI  
+- JSON database (no external DB required)
 
 ---
 
 # 🚀 Project Overview
 
-VectorMatrix enables teams to:
+### 1. Team Module
+Users submit:
+- Full Name  
+- Email  
+- Team Name  
+- Manager Name  
+- Documents / Links  
 
-- Submit team data from UI  
-- Automatically preprocess team information  
-- Store raw + processed data separately  
-- View team lists instantly  
-- Use a futuristic React UI  
-- Connect to a Flask JSON-backed API
+System:
+- Extracts skills, tools, work areas  
+- Generates SBERT embeddings  
+- Saves raw + processed versions  
 
 ---
 
-# 📁 Folder Structure
+### 2. Query Module
+Queries come from:
+- Reddit JSON  
+- Microchip forum  
+- Manual input  
+
+Each query contains:
+- Title, Content  
+- Source, URL  
+- Timestamp  
+- Comments count  
+
+System:
+- Cleans text  
+- Extracts keywords  
+- Embeds using SBERT  
+- Saves raw + processed versions  
+
+---
+
+### 3. Matching Engine
+Matching is done using cosine similarity:
+
+```
+score = dot(query_emb, team_emb) / (|query_emb| * |team_emb|)
+```
+
+Highest score = best team.
+
+Results stored in:
+- match_results.json  
+
+---
+
+### 4. Dashboard Module (React UI)
+Features:
+- Query → Team match cards  
+- Color-coded score badges  
+- Team logos  
+- Sorting (asc/desc)  
+- Filtering (team)  
+- “View Full Ranking” page  
+- Responsive layout  
+
+---
+
+# 🧠 System Architecture
+
+```
+Teams → Preprocess → Embedding
+Queries → Preprocess → Embedding
+               ↓
+         Matching Engine
+               ↓
+Dashboard (Best Team + Ranking)
+```
+
+---
+
+# 📁 Project Structure
 
 ```
 vector-matrix/
@@ -34,42 +97,48 @@ vector-matrix/
 │   ├── app.py
 │   ├── teams_details.json
 │   ├── team_processed_details.json
-│   ├── requirements.txt
-│   └── venv/
+│   ├── queries_raw.json
+│   ├── queries_processed.json
+│   ├── match_results.json
+│   └── requirements.txt
 │
 └── frontend-react/
+    ├── index.html
     ├── package.json
     ├── vite.config.js
-    ├── index.html
     └── src/
+        ├── api.js
+        ├── components/
+        │   └── Navbar.jsx
+        └── pages/
+            ├── Dashboard.jsx
+            ├── Ranking.jsx
+            ├── Teams.jsx
+            ├── ViewTeam.jsx
+            ├── EditTeam.jsx
+            └── Home.jsx
 ```
 
 ---
 
-# 🔧 Backend Setup (Flask API)
+# 🔧 Backend Setup
 
 ## macOS
-
-### Install Python & Node (Homebrew recommended)
 ```
-brew install python node
-```
-
-### Create virtual environment
-```
-cd vector-matrix/backend
+cd backend
 /opt/homebrew/bin/python3 -m venv venv
 source venv/bin/activate
-```
-
-### Install backend dependencies
-```
 pip install -r requirements.txt
+python3 app.py
 ```
 
-### Start backend server
+## Windows
 ```
-python3 app.py
+cd backend
+python -m venv venv
+venv\Scriptsctivate
+pip install -r requirements.txt
+python app.py
 ```
 
 Backend runs at:
@@ -79,103 +148,94 @@ http://127.0.0.1:5000
 
 ---
 
-## Windows
+# 🌐 Frontend Setup
 
-### Create virtual environment
 ```
-cd vector-matrix\backend
-python -m venv venv
-venv\Scripts\activate
-```
-
-### Install dependencies
-```
-pip install flask flask-cors
-```
-
-### Start server
-```
-python app.py
-```
-
----
-
-# 🌐 Frontend Setup (React + Vite)
-
-### Install frontend dependencies
-```
-cd vector-matrix/frontend-react
+cd frontend-react
 npm install
-```
-
-### Start frontend dev server
-```
 npm run dev
 ```
 
-Frontend runs at:
+UI runs at:
 ```
-http://localhost:5173/
+http://localhost:5173
 ```
 
 ---
 
-# 🧠 API Endpoints
+# 🌍 API Summary
 
-## Base URL
+## Team APIs
 ```
-http://127.0.0.1:5000/api
+POST /api/teams
+GET  /api/teams
+GET  /api/teams/processed
+GET  /api/team/<id>
+GET  /api/team/processed/<id>
 ```
 
-### 1️⃣ Get all raw teams  
-**GET** `/api/teams`
+## Query APIs
+```
+POST /api/queries
+POST /api/queries/process/<qid>
+GET  /api/queries/raw
+GET  /api/queries/processed
+```
 
-### 2️⃣ Add new team (triggers processing)  
-**POST** `/api/teams`
+## Matching & Dashboard APIs
+```
+POST /api/match/<qid>
+GET  /api/matches
+GET  /api/dashboard/matches
+GET  /api/dashboard/rankings/<qid>
+```
 
-### 3️⃣ Get single raw item  
-**GET** `/api/team/<id>`
+---
 
-### 4️⃣ Delete raw item  
-**DELETE** `/api/team/<id>`
+# 🎨 UI Features
 
-### 5️⃣ Get all processed items  
-**GET** `/api/processed`
-
-### 6️⃣ Get one processed item  
-**GET** `/api/processed/<id>`
+- Team logos  
+- Color-coded score badges  
+- Query cards  
+- Sorting & filtering  
+- Full ranking page  
+- Team editing and details  
 
 ---
 
 # 🗄 JSON Database Files
 
-| File | Description |
-|------|-------------|
-| `teams_details.json` | Raw submitted team data |
-| `team_processed_details.json` | Backend-processed data |
-
-Both are auto-created if missing.
+| File | Purpose |
+|------|----------|
+| teams_details.json | Raw team data |
+| team_processed_details.json | Processed teams with embeddings |
+| queries_raw.json | Raw queries |
+| queries_processed.json | Processed queries with embeddings |
+| match_results.json | All match records |
 
 ---
 
-# 🐞 Troubleshooting
+# 🛠 Troubleshooting
 
-### Flask: ModuleNotFoundError: No module named flask
-You installed Flask globally instead of inside venv.
+### macOS: “externally-managed-environment”
+Use:
+```
+/opt/homebrew/bin/python3 -m venv venv
+```
 
-Fix:
+### ModuleNotFoundError (Flask)
 ```
 source venv/bin/activate
 pip install flask flask-cors
 ```
 
-### macOS: “externally-managed-environment”
-Use Homebrew Python:
+### SBERT model download errors
+Ensure internet OR pre-download model:
 ```
-/opt/homebrew/bin/python3 -m venv venv
+pip install sentence-transformers
 ```
 
-### React plugin error
+### React Vite plugin error
 ```
 npm install @vitejs/plugin-react
 ```
@@ -183,5 +243,4 @@ npm install @vitejs/plugin-react
 ---
 
 # 🎉 You're Ready!
-VectorMatrix is fully set up on **Windows** and **macOS**.
-
+VectorMatrix is fully operational with Teams + Queries + Matching + Dashboard + Ranking.
