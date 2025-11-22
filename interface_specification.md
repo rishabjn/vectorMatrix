@@ -155,12 +155,6 @@ Backend expects JSON files in `backend/` by default:
 
 ---
 
+
 ## 9. References
-- Project README (uploaded): /mnt/data/README.md
-
----
-
-## 10. Files included
-- `interface_specification.md` (this file)
-- `interface_schemas.json` (machine schemas)
-- `interface_openapi.yaml` (OpenAPI contract)
+- Project README (uploaded): [README](./README.md)
