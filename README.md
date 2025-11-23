@@ -1,154 +1,154 @@
-# VectorMatrix – AI Driven Query-to-Team Matching System
+# VectorMatrix Backend – Modular Architecture & Auto-Reprocess
 
-VectorMatrix is a full-stack ML-powered system designed to automatically match incoming technical queries from public forums (Reddit, Microchip forums, etc.) to the most suitable internal engineering teams using SBERT embeddings and cosine similarity.  
-It includes:
+## 📦 Overview
+VectorMatrix is a modular backend built using **Flask + SBERT** for:
+- Collecting team details
+- Collecting forum queries (Reddit, Microchip forums etc.)
+- Preprocessing inputs using embeddings
+- Running semantic matching between queries & teams
+- Visualizing results in a React dashboard  
 
-- React (Vite) Frontend  
-- Flask Backend  
-- SBERT Embedding Model  
-- Fully automated query → team matching  
-- Dashboard + Full Ranking UI  
-- JSON database (no external DB required)
-
----
-
-# 🚀 Project Overview
-
-### 1. Team Module
-Users submit:
-- Full Name  
-- Email  
-- Team Name  
-- Manager Name  
-- Documents / Links  
-
-System:
-- Extracts skills, tools, work areas  
-- Generates SBERT embeddings  
-- Saves raw + processed versions  
+This document includes:
+1. Project Structure  
+2. JSON Database Layout  
+3. API Endpoints  
+4. Auto-Reprocess Feature  
+5. Developer Commands  
+6. Dataflow Diagram Explanation  
+7. Extending the System  
 
 ---
 
-### 2. Query Module
-Queries come from:
-- Reddit JSON  
-- Microchip forum  
-- Manual input  
-
-Each query contains:
-- Title, Content  
-- Source, URL  
-- Timestamp  
-- Comments count  
-
-System:
-- Cleans text  
-- Extracts keywords  
-- Embeds using SBERT  
-- Saves raw + processed versions  
-
----
-
-### 3. Matching Engine
-Matching is done using cosine similarity:
+# 📁 Folder Structure
 
 ```
-score = dot(query_emb, team_emb) / (|query_emb| * |team_emb|)
-```
-
-Highest score = best team.
-
-Results stored in:
-- match_results.json  
-
----
-
-### 4. Dashboard Module (React UI)
-Features:
-- Query → Team match cards  
-- Color-coded score badges  
-- Team logos  
-- Sorting (asc/desc)  
-- Filtering (team)  
-- “View Full Ranking” page  
-- Responsive layout  
-
----
-
-# 🧠 System Architecture
-
-```
-Teams → Preprocess → Embedding
-Queries → Preprocess → Embedding
-               ↓
-         Matching Engine
-               ↓
-Dashboard (Best Team + Ranking)
-```
-
----
-
-# 📁 Project Structure
-
-```
-vector-matrix/
+backend/
 │
-├── backend/
-│   ├── app.py
-│   ├── teams_details.json
-│   ├── team_processed_details.json
-│   ├── queries_raw.json
-│   ├── queries_processed.json
-│   ├── match_results.json
-│   └── requirements.txt
+├── app.py
+├── db/
+│   ├── teams/
+│   │   ├── teams_details.json
+│   │   └── team_processed_details.json
+│   │
+│   ├── queries/
+│   │   ├── queries_raw.json
+│   │   └── queries_processed.json
+│   │
+│   ├── matches/
+│       └── match_results.json
 │
-└── frontend-react/
-    ├── index.html
-    ├── package.json
-    ├── vite.config.js
-    └── src/
-        ├── api.js
-        ├── components/
-        │   └── Navbar.jsx
-        └── pages/
-            ├── Dashboard.jsx
-            ├── Ranking.jsx
-            ├── Teams.jsx
-            ├── ViewTeam.jsx
-            ├── EditTeam.jsx
-            └── Home.jsx
+├── processing/
+│   ├── preprocess_team.py
+│   ├── preprocess_query.py
+│   ├── rebuild_matches.py
+│   └── utils.py
+│
+├── scripts/
+│   ├── reprocess_all.py
+│   ├── import_reddit.py
+│
+├── requirements.txt
+└── venv/
 ```
 
 ---
 
-# 🔧 Backend Setup
+# 🧠 Data Flow (Example)
 
-## macOS
 ```
-cd backend
-/opt/homebrew/bin/python3 -m venv venv
+Raw Teams ─────────────┐
+                        │
+                        ▼
+             preprocess_team.py
+                        │
+                        ▼
+         team_processed_details.json
+                        │
+                        │
+Raw Queries ────────────┐
+                        ▼
+            preprocess_query.py
+                        │
+                        ▼
+        queries_processed.json
+                        │
+                        ▼
+        rebuild_matches.py (cosine similarity)
+                        │
+                        ▼
+           match_results.json
+                        │
+                        ▼
+        React Dashboard (UI)
+```
+
+### ✔ Example Scenario
+
+- Team: *MPLAB Tooling Team*  
+- Query: “PIC16F877 enum structure issues in MPLAB X”
+
+Generated:
+```
+PIC16F Query → Assigned to MPLAB Tools (Score 0.89)
+```
+
+---
+
+# ⚙️ Auto-Reprocess Feature
+
+Whenever a **team or query** is added, VectorMatrix:
+
+✔ Rebuilds processed team embeddings  
+✔ Rebuilds processed query embeddings  
+✔ Regenerates match results  
+✔ Automatically updates dashboard  
+
+
+---
+
+# 🔌 API Endpoints
+
+## Teams
+POST `/api/teams`  
+GET `/api/teams`  
+GET `/api/teams/processed`
+
+## Queries
+POST `/api/queries`  
+GET `/api/queries/raw`  
+GET `/api/queries/processed`
+
+## Matching
+POST `/api/match/<qid>`  
+GET `/api/dashboard/overview`  
+GET `/api/dashboard/rankings/<qid>`  
+
+---
+
+# 🛠 Setup Instructions
+
+## Mac
+```
+python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 python3 app.py
+python3 -m scripts.reprocess_all # (Optional, when new data arrives)
 ```
 
 ## Windows
 ```
-cd backend
 python -m venv venv
-venv\Scriptsctivate
+venv\Scripts\activate
 pip install -r requirements.txt
 python app.py
-```
+python -m scripts.reprocess_all # (Optional, when new data arrives)
 
-Backend runs at:
-```
-http://127.0.0.1:5000
 ```
 
 ---
 
-# 🌐 Frontend Setup
+# React Setup
 
 ```
 cd frontend-react
@@ -156,86 +156,56 @@ npm install
 npm run dev
 ```
 
-UI runs at:
+---
+
+# JSON DB Structures
+
+### teams_details.json
 ```
-http://localhost:5173
+{
+  "id": "uuid",
+  "team_name": "...",
+  "full_name": "...",
+  "documents": ["doc1", "doc2"]
+}
+```
+
+### team_processed_details.json
+```
+{
+  "id": "uuid",
+  "skills": ["c", "embedded"],
+  "embedding": [...]
+}
+```
+
+### queries_processed.json
+```
+{
+  "id": "q-uuid",
+  "clean_text": "...",
+  "keywords": ["c"],
+  "embedding": [...]
+}
+```
+
+### match_results.json
+```
+{
+  "query_id": "q-uuid",
+  "team_id": "uuid",
+  "score": 0.87,
+  "ranking": [...]
+}
 ```
 
 ---
 
-# 🌍 API Summary
+# Extending the System
 
-## Team APIs
-```
-POST /api/teams
-GET  /api/teams
-GET  /api/teams/processed
-GET  /api/team/<id>
-GET  /api/team/processed/<id>
-```
+- Add Jira/Github/StackOverflow sources  
+- Replace SBERT with GPT embeddings  
+- Add Authentication (JWT)  
+- Add CLI tools  
+- Convert JSON DB → SQLite or MongoDB  
 
-## Query APIs
-```
-POST /api/queries
-POST /api/queries/process/<qid>
-GET  /api/queries/raw
-GET  /api/queries/processed
-```
-
-## Matching & Dashboard APIs
-```
-POST /api/match/<qid>
-GET  /api/matches
-GET  /api/dashboard/matches
-GET  /api/dashboard/rankings/<qid>
-```
-
----
-
-# 🎨 UI Features
-
-- Team logos  
-- Color-coded score badges  
-- Query cards  
-- Sorting & filtering  
-- Full ranking page  
-- Team editing and details  
-
----
-
-# 🗄 JSON Database Files
-
-| File | Purpose |
-|------|----------|
-| teams_details.json | Raw team data |
-| team_processed_details.json | Processed teams with embeddings |
-| queries_raw.json | Raw queries |
-| queries_processed.json | Processed queries with embeddings |
-| match_results.json | All match records |
-
----
-
-# 🛠 Troubleshooting
-
-### macOS: “externally-managed-environment”
-Use:
-```
-/opt/homebrew/bin/python3 -m venv venv
-```
-
-### ModuleNotFoundError (Flask)
-```
-source venv/bin/activate
-pip install flask flask-cors
-```
-
-### SBERT model download errors
-Ensure internet OR pre-download model:
-```
-pip install sentence-transformers
-```
-
-### React Vite plugin error
-```
-npm install @vitejs/plugin-react
-```

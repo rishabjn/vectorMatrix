@@ -118,9 +118,25 @@ score = dot(q_emb, team_emb) / (norm(q_emb) * norm(team_emb))
 
 ## 7. Data Flow Diagram
 ```
-Teams → Preprocess → Processed Teams → Matching
-Queries → Preprocess → Processed Queries → Matching
-Matching → Dashboard → Ranking
+db/teams/teams_details.json
+            ↓
+preprocess_team.py
+            ↓
+db/teams/team_processed_details.json
+            ↓
+                ↘
+                 ↘   rebuild_matches.py
+                 ↙
+db/queries/queries_processed.json
+            ↑
+preprocess_query.py
+            ↑
+db/queries/queries_raw.json
+            ↓
+match_results.json
+            ↓
+Frontend Dashboard (React)
+
 ```
 
 ---
@@ -131,26 +147,22 @@ vector-matrix/
 │
 ├── backend/
 │   ├── app.py
-│   ├── teams_details.json
-│   ├── team_processed_details.json
-│   ├── queries_raw.json
-│   ├── queries_processed.json
-│   └── match_results.json
+│   ├── db/
+│   │   ├── teams/
+│   │   ├── queries/
+│   │   └── matches/
+│   ├── processing/
+│   ├── scripts/
+│   ├── requirements.txt
+│   └── venv/
 │
 ├── frontend-react/
 │   ├── src/
-│   │   ├── api.js
-│   │   ├── pages/
-│   │   │   ├── Dashboard.jsx
-│   │   │   ├── Ranking.jsx
-│   │   │   ├── Teams.jsx
-│   │   │   ├── ViewTeam.jsx
-│   │   │   └── EditTeam.jsx
-│   │   └── components/
-│   │       └── Navbar.jsx
-│   └── package.json
+│   ├── package.json
+│   └── vite.config.js
 │
-└── README.md
+└── README.md (root)
+
 ```
 
 ---
