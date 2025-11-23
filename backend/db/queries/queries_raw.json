@@ -1,6 +1,51 @@
 [
   {
-    "id": "q-2ea31aab-4986-4afd-bd17-3ccc40775202",
+    "id": "q-001",
+    "title": "enum structure in C for PIC16F877",
+    "content": "I am trying to write firmware for the PIC16F877. I want to use enum structures for readability but I'm not sure if XC8 has limitations on enums.",
+    "source": "reddit/pic_programming",
+    "url": "https://reddit.com/post1",
+    "timestamp": 1762885100,
+    "comments_count": 4
+  },
+  {
+    "id": "q-002",
+    "title": "ICD4 not connecting to PIC16F819",
+    "content": "ICD4 programmer keeps giving connection errors when connecting to PIC16F819. Tried multiple cables.",
+    "source": "reddit/pic_programming",
+    "url": "https://reddit.com/post2",
+    "timestamp": 1762885200,
+    "comments_count": 8
+  },
+  {
+    "id": "q-003",
+    "title": "MPLAB X IDE showing strange yellow warnings",
+    "content": "After updating MPLAB X to version 6.20, I am getting visual warnings and random layout glitches.",
+    "source": "microchip_forum",
+    "url": "https://microchip.com/post3",
+    "timestamp": 1762885300,
+    "comments_count": 12
+  },
+  {
+    "id": "q-004",
+    "title": "Common Anode Dual Color LED not switching correctly",
+    "content": "I wired a common anode LED but both colors are glowing dimly instead of switching cleanly.",
+    "source": "reddit/embedded",
+    "url": "https://reddit.com/post4",
+    "timestamp": 1762885400,
+    "comments_count": 3
+  },
+  {
+    "id": "q-005",
+    "title": "PIC vs ESP32 for low-power IoT application",
+    "content": "Trying to decide whether to use PIC16 series or ESP32 for battery-powered temperature sensing.",
+    "source": "reddit/iot",
+    "url": "https://reddit.com/post5",
+    "timestamp": 1762885500,
+    "comments_count": 10
+  },
+  {
+    "id": "q-0967a3dc-8b94-4310-8a86-1981f5f644e9",
     "title": "enum structire in C for Pic 16f877",
     "content": "I am trying to write a firmware for a Pic 16f877. as i wish to read several variables, i declared some Enum structures.\n\nHowever, in the recent past, i had learnt that pics like 16f819 are just able to handle 2 variable, i mean if((a = 1) &amp;&amp; (b == 1) { do this} or that. \n\ni had read its datasheet, it speaks about it's registers and bits you can enable or disable to use features of the chip, yet, nothing seems to tell me about limitations on C language.",
     "source": "reddit/pic_programming",
@@ -9,7 +54,7 @@
     "comments_count": 4
   },
   {
-    "id": "q-d60de3d5-0ffd-4159-994b-3ec9f182c1aa",
+    "id": "q-921637f7-e8ff-4aed-a27f-fe06722f2dec",
     "title": "pic16f819 reset from within code",
     "content": "After finding several errors in a pic16f819 project i finnaly got the chip doing what i wanted to do. it does what i wish to do once i turn on a switch and comes back when it's off.\n\nHowever, there is something i wish to do: i would like to be able to soft reset it once the switch is turned off since i  want it to wait a certain ammount of time before resuming if it finds on the switch after counting.\n\nAt the moment, i do have this situation:\n\n\\#pragma config MCLRE = ON       // RA5/MCLR/VPP Pin Function Select bit (RA5/MCLR/VPP pin function is MCLR)\n\ni do believe it has a pullup on this pin wich i do have to turn on, cut the +5v coming there from the regulator and then, once switcing off the rocker switch, which represents a while cycle, to reset it. I tried both \"reset\" and \"asm(reset)\" but compiler tell me is illegal on this IC. \n\nThe question i would like to ask is: if i do have to change RB5 to some other mode to enable soft reset and then, once quitting the while() loop, what instruction should i use after it to get the pic starting over.",
     "source": "reddit/pic_programming",
@@ -18,7 +63,7 @@
     "comments_count": 9
   },
   {
-    "id": "q-59d81c07-26bd-4722-9546-26dec9a64de6",
+    "id": "q-23a20b68-95d4-4efb-be4b-07f07a491b40",
     "title": "pic 16f819 option reg rbpu = off is giving me headaches",
     "content": "I do have a small board using a pic16f819 wich actually works but i wish to improve it. \n\nSince i builti it, i had took some knowledge about pic registers and their bits. I do wish to disable weak pullups on some pins at Port B, so i can send them to ground and use some switches to be read by the Pic and take action in consecuence. \n\nI am struggling with the line \"OPTION\\_REG.RBPU = 1\" where supposedly disables them and mplabx tells me it can not compile because of a \"macro\" problem. \n\nLooking further in the web, i tried \"OPTION\\_REG=0x00\" and it took it, yet i do not know what part of Option Ref am i turining on or off. I am coding in C, i have no knowledge of Assembler.",
     "source": "reddit/pic_programming",
@@ -27,7 +72,7 @@
     "comments_count": 7
   },
   {
-    "id": "q-1382c6c2-cd75-4aca-96b5-0e6ab8872a94",
+    "id": "q-838e3d95-7268-4566-b7d5-ae2257d72408",
     "title": "Trying to compile with strange errors",
     "content": "I am working the program for a pic. a 16f877.\n\nSome pins are in, some out. i am not using any other module. I am readling it's datasheet, still i am coding in C.\n\nI plan to drive some motors, leds , read buttons and allow the user to choose tasks to be performed by them.\n\ni had defined each input output using tris(a,b,c,d)bits even i named the ports using the \"port(abcd)bits = button or mottor\".\n\ni did write a main.c which includes other files, let's say task1.c, task2.c and task3.c\n\nThen i wrote other ones combining the functions within task1.c, task2.c and task3.c.\n\nOn each .c file i do have the #pragma configs, the clock frequency and the pin definitions for each one, that diminished a lot of errors.\n\nHowever, i do have several if (button1 = 1 &amp;&amp; desiredjob = a)\n\n{\n\nled1 = 1;\n\n\\_\\_delay\\_ms(1000);.\n\nled1 = 0;\n\n}\n\nonce i try to build it, the compiler keeps telling me it expect expressions after stuff like the IF i'm showing here. i did add the clockspeed, the #pragma settings to each individual .c file and then i added it by \"#include \"task1.c\" so the compiler is trying to make them. As far as i know, i am only using 0 and 1.\n\n\n\ni do have several questions i would like to resolve:\n\n1. If tris(abcd)bits..pin.= input is 1 or 0 and vice versa;\n\n2. If after defining \"motor1 = port(abcd)bits.ra1\" /\\*pin ra1\\*/; do i have to declare some sort of \"int motor1 = 0\" or if it does it take it for a variable automatically;\n\n3. if i can define pins, variables, clock frecuency into main.c and them get the other .c files under those terms or if i do in mandatory manner have to define that for each .c file;\n\n4. I did include, together with xc.h stdio.h and stdbool.h. I am not trying to perform complext task, just making choices and turn things on and off following timed procedures, i would like to know if i do need those headers or not.\n\n\n\n\n\n",
     "source": "reddit/pic_programming",
@@ -36,7 +81,7 @@
     "comments_count": 0
   },
   {
-    "id": "q-a8ec3c5b-97d8-469d-ad18-b495144765a6",
+    "id": "q-32e24d40-cb80-44da-b4e1-76392fbf47dd",
     "title": "On And Off With Single Button In Pic",
     "content": "I am trying to use a button to power on and off something driven by a Pic.\n\nAfter pushing that Power switch, the Pic should turn on some leds and run some actions, within while(1){}\n\nIf i push the button again, no matter the part of the programme it may be running, it should turn all stuff suddenly off. I do not want to turn off the pic itself, just the peripherials. How can create such mode switching in C?",
     "source": "reddit/pic_programming",
@@ -45,7 +90,7 @@
     "comments_count": 3
   },
   {
-    "id": "q-5e64205d-2fab-4704-82e2-1fee18fdee0c",
+    "id": "q-133ef5d8-040f-47ed-88e5-5558177caabc",
     "title": "Strange Files in Mplab X Project",
     "content": "I had start a new project on Mplab X, using another one as a base.\n\nI did open the file of the old one, to be able to use it as an example for the new. I did not modify it at all.\n\nHowever, each time i load MplabX, i am running it on Fedora, whenever it opens the actual project, it keeps loading that file, wich is a .c source file. How can i make Mplab X to forget that unwanted source file?",
     "source": "reddit/pic_programming",
@@ -54,7 +99,7 @@
     "comments_count": 2
   },
   {
-    "id": "q-f733f9c5-4829-4d7c-bb3e-f5e699e8ee40",
+    "id": "q-4b1e5e13-96b7-4d7e-a1b5-bd384d7998f5",
     "title": "Pic board with menu and several procedures",
     "content": "I am developing a board using a Pic 16f877. \n\nI have some buttons (inputs) and some outputs (leds and/or power transistors.\n\nOne of them is an on-off like switch. Whenever i depress it, some leds shall come on and a procedure awaiting me to depress other button and select between some tasks until i do that and depress \"run\".\n\nI had divide my source code between several different source files, which i have been writing in C language. Each one has a name.\n\nI do belive in C, i can select cyclically  a task by depressing a button asking to read it, something like , please have in mind its and example and not true C code what i'm writing below\n\nIf(!taskbutton)\n\nAsuming\n\nvoid Procedure1(void)\n\n{\n\nstuff to do;\n\n}\n\nvoid Procedure2(void)\n\n{\n\nstuff to do;\n\n}\n\n{\n\nfor(task = 0; task &lt;= 2; task +1)\n\n}\n\nif (task =1)\n\nProcedure1;\n\nProcedure1Led = 1;\n\nChosenProcedure = Procedure1;\n\nelse\n\nProcedure1Led = 0;  \n\n\nif(task = 2)\n\n{\n\nProcedure 2;\n\nProcedure2Led = 1;\n\nChosenProcedure = Procedure2;\n\nelse\n\n}\n\nProcedureLed = 0;\n\nand so on.\n\nHowever the tasks i am writing have no numbers but names. As far as i know, i can not add or substract name strings, just integer numbers. Does exist any manner of accomplishing some sort of push button menu selection able to go from default to the last one and them once the last one has been reached, start over on default?",
     "source": "reddit/pic_programming",
@@ -63,7 +108,7 @@
     "comments_count": 1
   },
   {
-    "id": "q-e763de0b-5912-41c0-a056-c2fe08f5dd2a",
+    "id": "q-fda753a2-386d-4c5f-80bb-f3f3396d2fcd",
     "title": "Easily build your Free XC32 PRO Compiler",
     "content": "I've made a full auto script to easily cross compile xc32 v4.35 for windows to get all the xc32 pro features for free:  \n[https://github.com/nikisalli/Free\\_XC32\\_PRO\\_Compiler/](https://github.com/nikisalli/Free_XC32_PRO_Compiler/)\n\njust follow the instructions and you're ready to compile all the code you want with all the possible optimizations\n\nall the credits for the original scripts go to [https://github.com/ElectricRCAircraftGuy](https://github.com/ElectricRCAircraftGuy) who made the original effort, I just patched the build scripts, fixed some errors and packaged it in a more reproducible build environment.\n\nEnjoy! and fuck microchip :)",
     "source": "reddit/pic_programming",
@@ -72,7 +117,7 @@
     "comments_count": 1
   },
   {
-    "id": "q-89d0e3f2-d6cb-4651-8fac-e7ae8db23a2d",
+    "id": "q-3815c1e0-080f-4765-b9cc-03e6dfa9052c",
     "title": "Mplab X 6.20 display issues in Fedora Linux",
     "content": "I am struggling with some bad behaviours with Mplab 6.20.\n\nI know it's not the latest one, but is the last one which allows me to use the Pickit 3 programmer. \n\nI am having a strange issue: whenever i do click in any menu after opening, the menu itself appears down the screen like floating on it alone, and not hanging off the menu bar. If i just open the \"options\" menu and try again, this time it does normally. Does it have any display setting i can fix somewhere?",
     "source": "reddit/pic_programming",
@@ -81,7 +126,7 @@
     "comments_count": 1
   },
   {
-    "id": "q-4eee363d-57ae-4516-be1e-af98c4618fb4",
+    "id": "q-5d18aeb1-1df4-497e-bd86-08ed0e2ae28b",
     "title": "Does Mplab and / or xc8 support the \"Switch Case\" statement while coding in C?",
     "content": "Does Mplab and / or xc8 support the \"Switch Case\" statement while coding in C?",
     "source": "reddit/pic_programming",
@@ -90,7 +135,7 @@
     "comments_count": 1
   },
   {
-    "id": "q-97d8b299-7a71-4abf-be7b-da976ba398ed",
+    "id": "q-302896bd-1136-4d59-ad2b-8266dacd804a",
     "title": "Pin to Ground Resistor Value in Pics",
     "content": "I am setting up a new pic project. I do wish to send input pins to ground and then use pushbuttons as a positive signal. When running the pic at 5v, which are the best values for ground resistors and switch to pin ones, to send a \"1\" being 0 by default?",
     "source": "reddit/pic_programming",
@@ -99,7 +144,7 @@
     "comments_count": 4
   },
   {
-    "id": "q-19626466-c6a9-47fb-9a2f-1b844ffb9496",
+    "id": "q-bc608191-3bfd-4cae-9d38-b3012528f1c3",
     "title": "Common Anode Dual Color Led",
     "content": "I am trying to have a dual color led (red and green, no blue) wich happens to have a common positive and two negatives, one for each color. \n\nI do have a PIC wich uses negative as ground as the rest of the circuitry. However i need dual color indication for what i am trying to do and i could get no common cathode leds. Does exist any manner of adapting common anode ones?",
     "source": "reddit/pic_programming",
@@ -108,7 +153,7 @@
     "comments_count": 1
   },
   {
-    "id": "q-aeba353e-dffa-4b64-bf3c-f483d726503b",
+    "id": "q-91a89f1b-46f5-4f2c-be7b-bceb778dae1e",
     "title": "About Input Buttons",
     "content": "On my 1st board using a smaller PIC, i did connect a switch between +b and one input pin using a resistor in series with the pin and i got it working or either stop. I did the same with other dip switches but they did not change the behaviour of the IC.\n\nNow i am doing another one using push buttons to be read and change variables before proceeding. As far as i know there seem to be two manners: either a button and resistor in series between +B and input pin or another one where there is a resistor always connected between +B and Input, and then, there is a derivation to a switch or button connected to Ground. \n\nOn the first case, the pins would be theoretically in 0 by default and the switch would turn on (1) the pin; \n\nIn the last case, default would be 1 and Switch or Button would turn it Off (0).\n\ni have several concerns about this:\n\nFirst, if on microchip pics 16fxxx is better or right one or the another;\n\nSecond, if is it enought to try to read pins from IF {} sentences when coding in C or if it does exist any other command to read them and do or stop something;\n\nThird, assuming 5v of power, what value is best for the IC.",
     "source": "reddit/pic_programming",
@@ -117,7 +162,7 @@
     "comments_count": 4
   },
   {
-    "id": "q-8c535749-2f9d-4dd8-b92c-8e637aa30e05",
+    "id": "q-32f46a51-dddf-4c18-ad28-3e087bdffa7b",
     "title": "Setting default voltage and power on Mplab Ipe 6.20",
     "content": "I am running Mplab 6.20 using a Pickit 3 programmer.I am using it on Fedora Linux, installed as it came from Microchip.\n\nMy real USB voltage is 4.75v, yet each time i use it i do have to set up voltage and power from pickit. I do believe it has a manner of setting a work environment, however i do not know how to set up one as default. Does it have somewhere in my computer a file i can edit , if needed, as root user, and change variables?",
     "source": "reddit/pic_programming",
@@ -126,7 +171,7 @@
     "comments_count": 4
   },
   {
-    "id": "q-1a2c4013-6908-4dd0-94e3-973e1a42d6cd",
+    "id": "q-fbfaae22-6e0b-4026-b307-570a3145dd32",
     "title": "PIC vs ESP32?",
     "content": "Hey gang!!!\n\nThis might be a long shot but I'm running out of patience with this project!!\n\nI'm trying to take the output of PIC16c773/sp that normally drives a 16x2 LCD display and wash it through a ESP32 to display on a TFT. \n\nI got the two to talk,  but I'm having problems with timing or frame recognition.  The LCD displays something like PERFORMANCE... but I'm getting things like PFMNCE one time... maybe FOCE the 2nd... and so on.  Never the same and rarely more than a few coherent letters. \n\nIs there a trick to getting the timing aligned between these two? Any hints or wisdom? I am getting characters.. but one of these is either incredibly fast or slow. I can't tell! I don't have a scope,  so no way to read the output beyond what I can see on the ESP32 monitor. \n\nI've already converted it from the 5v output to a 3v input for the ESP32 and I'm getting some chars, so i think there's no issue beyond figuring out the frame or timing, but i might be wrong. \n\nThere are other issues past this, like the data being displayed,  but if i could get the splash screen to translate properly,  I think i could get the rest.\n\nI'm not really familiar with the PIC family, so any help is appreciated. Figured I'd come beg the experts for a little guidance! \n\nThanks!! \n\nEdit: cleaned up the markings and discovered it's actually a 773/SP. Sorry!",
     "source": "reddit/pic_programming",
@@ -135,7 +180,7 @@
     "comments_count": 15
   },
   {
-    "id": "q-1d2bacdd-aadc-477d-a315-f132ce9c3cdb",
+    "id": "q-ad008b5e-6657-4d94-b625-e24a0d64cdc9",
     "title": "PIC vs ESP32?",
     "content": "",
     "source": "reddit/pic_programming",
@@ -144,7 +189,7 @@
     "comments_count": 2
   },
   {
-    "id": "q-4217bb14-dadf-4616-ab12-8af67600d97a",
+    "id": "q-1e768f37-4ad0-4421-96f9-dd42b14627d3",
     "title": "Best plugins and tips for MPLAB X IDE v6.20?",
     "content": "Hi everyone,\n\nI\u2019ve just started working with MPLAB X IDE version 6.20 and I\u2019d like to improve my workflow. Are there any must-have plugins or useful extensions you\u2019d recommend?\n\nAlso, if you have any productivity tips, hidden features, or configuration tweaks that make development easier or faster, I\u2019d love to hear them.\n\nThanks in advance :)",
     "source": "reddit/pic_programming",
@@ -153,7 +198,7 @@
     "comments_count": 7
   },
   {
-    "id": "q-42cea3e9-7107-4e88-8f0b-357b6a9a2f9f",
+    "id": "q-5b3f74c8-fec1-4d7a-bcd7-333265470c2f",
     "title": "Help with schematics",
     "content": "Hello everyone,\n\n  \nI am working on my first project with a PIC micro controller, and I am having trouble figuring out how to wire the connections for the PICkit 5, could anyone tell me if I did this corretly?\n\nI want to make sure I will be able to program the PIC before i order it.\n\nmany thanks!",
     "source": "reddit/pic_programming",
@@ -162,7 +207,7 @@
     "comments_count": 5
   },
   {
-    "id": "q-3e032e91-10a2-490d-bbc1-8dd9fcf0b394",
+    "id": "q-1c315228-0e74-40c1-91b2-2713bec504d8",
     "title": "Mplab X and XC8 optimization in C Language",
     "content": "I had read that the XC8 compiler has several optimization options. Some users like them, some other do not. How can i choose that in Mplab X while developing something for a Pic?",
     "source": "reddit/pic_programming",
@@ -171,7 +216,7 @@
     "comments_count": 3
   },
   {
-    "id": "q-c3543ed5-af50-4010-84a8-41667b98aa52",
+    "id": "q-264d5e5e-9633-4bb6-a776-73edf44d349d",
     "title": "Choosing the right PIC  before starting a project",
     "content": "I had recently completed my first project using an old pic16f819.\n\nI did code it in C, i do not know anything about Assembler.\n\nI tried to read 4 switcheds and use that for choosing what while() run. However, after building the code with mplabx using the xc8 compiler, no matter how hard i try to optimize the code, i just get one subwhile running when i turn on or off only one switch.\n\nI tried to turn on a led using a pin while running them, it did not come on until i connected it into another pin which is always on whenever that while() routine runs.\n\nI tried to vary the timings of what is in that while() trying to pass \\_\\_delay\\_ms(variable) yet it only takes numbers. I tried writing several of them yet i can only run one of them.\n\nI am using xc8 2.50 or 3.00, mplabx 6.20 and pickit3, i can not move towards pickit4 at the moment.\n\nI do have several questions and doubts about this:\n\n1. I had learnt that \\_\\_delay\\_ms is a \"macro\" function and they do not use to take values from a variable. I tried \"%d\", \"%p\" and other operators, yet nothing. I tried a function from other developer which runs \\_\\_delay\\_ms(1ms) as many times as passed, yet it did not work for me on this microcontroller. Does exist any manner of passing variables to it?\n\n2. i could set properly input and output pins, set the clock speed and even name the pins within code. i had 4 pins as input, one of them triggers the while, the other shuts it off and turns of a led. I asked the pic to read how the others are and it seems indifferent to them. Its like i can not have them read by stuff like\n\n\n\n \"if ((pin1 == 1) &amp;&amp; (pin2 == 0)) \n\n{\\_\\_delay\\_ms = x\n\n}.\n\nArduino uses instrucctions as \"pinread and pinwrite\" or something like that, does PiCs have any equivalent from this?\n\nThe other concern i have is : i do wish to read the uptime since turning the IC on and the time the while() comes on pulling the switch; if time difference is less than x time i wish to blink a led one second, if is equal or higher than, then i would like to proceed witth the while, resetting the running time variable.\n\ni do plan to start another project using a pic16f819 wich is what i do have in my mechatronics box, is it pin-compatible with pic16f877?",
     "source": "reddit/pic_programming",
@@ -180,7 +225,7 @@
     "comments_count": 4
   },
   {
-    "id": "q-89495d26-5171-4f09-8410-baeba0d32d5b",
+    "id": "q-9269eeeb-006d-4ba3-8ff2-3076ecc5308b",
     "title": "Does \"void DELAY_milliseconds (uint16_t milliseconds)\" read variables?",
     "content": "Does the \"void [DELAY\\_milliseconds](https://onlinedocs.microchip.com/oxy/GUID-3934D5A2-C1FE-4609-B66D-55454D652D9F-en-US-9/Chunk330982260.html#GUID-7009D985-BACF-4B4C-9067-C093DBA124C0) (uint16\\_t milliseconds)\" accept the milliseconds contained in a variable instead of having them hard written into ()?\n\nShould it do, how should it invoke them within ()?",
     "source": "reddit/pic_programming",
@@ -189,7 +234,7 @@
     "comments_count": 0
   },
   {
-    "id": "q-483ab75e-d2a5-4c43-a492-65b21904fa55",
+    "id": "q-f2cb1974-ad31-41af-bb99-d39e9471026b",
     "title": "Trying to set \"_Delay_Ms\" time from a variable before main()",
     "content": "I am writing a firmwae for an old pic, 16f819, trying to turn on and off 3 pins in sequence, looking towards driving a switched reluctance motor.\n\nI got much of the program working well but, i seem to have learnt that \"\\_delay\\_ms()\" instruction only seems to take a number in milisenconds strictly declared between it's brakets. Does it have some sort of capacity for reading the content in miliseconds set by an external variable? Should that be feasible, what type (int, unsigned, long) should i use when declaring up to 1000 miliseconds? ",
     "source": "reddit/pic_programming",
@@ -198,7 +243,7 @@
     "comments_count": 6
   },
   {
-    "id": "q-197a1914-21d3-40bf-8a7f-ba0419f5aaf7",
+    "id": "q-01787da0-bdf0-43c5-b1de-c1485f7bd005",
     "title": "Can't connect to PIC18F4520 on MPLAB X v.6.20",
     "content": "Hello!\n\nI've got some pretty old project to maintain and I have a problem even connecting to the board.\n\nSince I didn't know why (and I've never worked with PIC before), I tried replacing controller and even buying new programmer. Nothing helped.\n\nI even tried the [most basic setup](https://imgur.com/a/a5ie3vw) recently, but I still get the same \"Connection failed\" messages.\n\nProgrammer seems to be ok - IDE detects it and doesn't report any errors. And MCU is new and never programmed before.\n\nI honestly don't know what I'm doing wrong and need help &gt;\\_&lt;",
     "source": "reddit/pic_programming",
@@ -207,7 +252,7 @@
     "comments_count": 5
   },
   {
-    "id": "q-2bc813cf-12ec-4879-91a5-9f8f8d3e4e20",
+    "id": "q-9c63e2b0-8c0e-44fe-bdfb-169eb4b104cd",
     "title": "Programming a composite hid device through old mplab on pic18f4550",
     "content": "Alright, so as the title suggests, I've got everything down. I've been trying to code my project to be able to act as an hid device for mouse, keyboard and joystick. The issue is - I can't seem to find a way to stick all of these three into a one, fully working HEX file.\n\nAt this point I have 3 HEX files, all working as intended for separate devices on my board, however, I want to make all of them work in a single HEX file through DIP switches(for example, dip state1 is mouse, state 2 is keyboard, state 3 is joystick).\n\nI've made a copy of the mouse hid project from picdemfsusb and remapped it to my own device, and I am trying to cater that to make it work as all three at once. My PC does recognize them all 3, viewed through USBTreeView, so that part seems fine.\n\nThe problem begins here - on dip state 1, the mouse movements work as I want them to, which is fine, however, once gotten into dip state 2, the keyboard does not want to produce simple outputs such as a,b,c,d,e on the screen, though the LED's do light up on-button-press accordingly. I've been having trouble to make at least 2 of these devices work on this file.\n\nIf needed, I can provide the full source code to it and the mapping system. Using the mplab8.92 and c18 compiler, since the source files already have the compiled software for it.\n\nIf anyone has any idea what might be wrong - please let me know. I'll provide as much details as I possibly can at this point.\n\nI have to know if this is even remotely possible to achieve in a singular HEX file, because I've been at this project for a month, and my finals are in 12 days.\n\nP.s. - the singular keyboard - hid does work fine, it just doesn't want to fully produce any output on screen on the composite project.",
     "source": "reddit/pic_programming",
@@ -216,7 +261,7 @@
     "comments_count": 2
   },
   {
-    "id": "q-0ea19b6c-1b45-4c02-b423-f2aabc7f81be",
+    "id": "q-a88211cd-87ce-4ce9-9f11-70b5e7e60c46",
     "title": "Where to find pic16f15276.inc file?",
     "content": "I am trying to learn pic assembly with the pic16f15276 chip, on the curiosity nano board.\n\nHowever, I am having a lot of trouble finding the .inc file that everyone references. I'm using mplab x 6.25, and have spend some time rummaging through all the folders with nothing of worth to show for it.\n\n  \nAny help at all would be appreciated",
     "source": "reddit/pic_programming",
@@ -225,7 +270,7 @@
     "comments_count": 4
   },
   {
-    "id": "q-da497042-6dea-49f2-9f17-83a8a5f6bcb0",
+    "id": "q-808635d0-99ea-4a90-ae27-d84645be0d06",
     "title": "enum structire in C for Pic 16f877",
     "content": "I am trying to write a firmware for a Pic 16f877. as i wish to read several variables, i declared some Enum structures.\n\nHowever, in the recent past, i had learnt that pics like 16f819 are just able to handle 2 variable, i mean if((a = 1) &amp;&amp; (b == 1) { do this} or that. \n\ni had read its datasheet, it speaks about it's registers and bits you can enable or disable to use features of the chip, yet, nothing seems to tell me about limitations on C language.",
     "source": "reddit/pic_programming",
@@ -234,7 +279,7 @@
     "comments_count": 4
   },
   {
-    "id": "q-80033026-abac-41c1-b1ce-53c40e959a85",
+    "id": "q-85a342da-55b3-4856-ab1b-411eea81587f",
     "title": "pic16f819 reset from within code",
     "content": "After finding several errors in a pic16f819 project i finnaly got the chip doing what i wanted to do. it does what i wish to do once i turn on a switch and comes back when it's off.\n\nHowever, there is something i wish to do: i would like to be able to soft reset it once the switch is turned off since i  want it to wait a certain ammount of time before resuming if it finds on the switch after counting.\n\nAt the moment, i do have this situation:\n\n\\#pragma config MCLRE = ON       // RA5/MCLR/VPP Pin Function Select bit (RA5/MCLR/VPP pin function is MCLR)\n\ni do believe it has a pullup on this pin wich i do have to turn on, cut the +5v coming there from the regulator and then, once switcing off the rocker switch, which represents a while cycle, to reset it. I tried both \"reset\" and \"asm(reset)\" but compiler tell me is illegal on this IC. \n\nThe question i would like to ask is: if i do have to change RB5 to some other mode to enable soft reset and then, once quitting the while() loop, what instruction should i use after it to get the pic starting over.",
     "source": "reddit/pic_programming",
@@ -243,7 +288,7 @@
     "comments_count": 9
   },
   {
-    "id": "q-a23436d6-a482-422e-8965-dc85f629d779",
+    "id": "q-65969992-b8f5-4f67-ab42-9f2f039e385e",
     "title": "pic 16f819 option reg rbpu = off is giving me headaches",
     "content": "I do have a small board using a pic16f819 wich actually works but i wish to improve it. \n\nSince i builti it, i had took some knowledge about pic registers and their bits. I do wish to disable weak pullups on some pins at Port B, so i can send them to ground and use some switches to be read by the Pic and take action in consecuence. \n\nI am struggling with the line \"OPTION\\_REG.RBPU = 1\" where supposedly disables them and mplabx tells me it can not compile because of a \"macro\" problem. \n\nLooking further in the web, i tried \"OPTION\\_REG=0x00\" and it took it, yet i do not know what part of Option Ref am i turining on or off. I am coding in C, i have no knowledge of Assembler.",
     "source": "reddit/pic_programming",
@@ -252,7 +297,7 @@
     "comments_count": 7
   },
   {
-    "id": "q-ee28df85-8bd8-46a0-950c-730c5c91042b",
+    "id": "q-98507ecb-fed4-4984-b9f2-eb60cb46832a",
     "title": "Trying to compile with strange errors",
     "content": "I am working the program for a pic. a 16f877.\n\nSome pins are in, some out. i am not using any other module. I am readling it's datasheet, still i am coding in C.\n\nI plan to drive some motors, leds , read buttons and allow the user to choose tasks to be performed by them.\n\ni had defined each input output using tris(a,b,c,d)bits even i named the ports using the \"port(abcd)bits = button or mottor\".\n\ni did write a main.c which includes other files, let's say task1.c, task2.c and task3.c\n\nThen i wrote other ones combining the functions within task1.c, task2.c and task3.c.\n\nOn each .c file i do have the #pragma configs, the clock frequency and the pin definitions for each one, that diminished a lot of errors.\n\nHowever, i do have several if (button1 = 1 &amp;&amp; desiredjob = a)\n\n{\n\nled1 = 1;\n\n\\_\\_delay\\_ms(1000);.\n\nled1 = 0;\n\n}\n\nonce i try to build it, the compiler keeps telling me it expect expressions after stuff like the IF i'm showing here. i did add the clockspeed, the #pragma settings to each individual .c file and then i added it by \"#include \"task1.c\" so the compiler is trying to make them. As far as i know, i am only using 0 and 1.\n\n\n\ni do have several questions i would like to resolve:\n\n1. If tris(abcd)bits..pin.= input is 1 or 0 and vice versa;\n\n2. If after defining \"motor1 = port(abcd)bits.ra1\" /\\*pin ra1\\*/; do i have to declare some sort of \"int motor1 = 0\" or if it does it take it for a variable automatically;\n\n3. if i can define pins, variables, clock frecuency into main.c and them get the other .c files under those terms or if i do in mandatory manner have to define that for each .c file;\n\n4. I did include, together with xc.h stdio.h and stdbool.h. I am not trying to perform complext task, just making choices and turn things on and off following timed procedures, i would like to know if i do need those headers or not.\n\n\n\n\n\n",
     "source": "reddit/pic_programming",
@@ -261,7 +306,7 @@
     "comments_count": 0
   },
   {
-    "id": "q-f6400abf-7fa2-4b1f-8e29-069711995674",
+    "id": "q-86521260-67cb-4c47-b937-e8400163ca09",
     "title": "On And Off With Single Button In Pic",
     "content": "I am trying to use a button to power on and off something driven by a Pic.\n\nAfter pushing that Power switch, the Pic should turn on some leds and run some actions, within while(1){}\n\nIf i push the button again, no matter the part of the programme it may be running, it should turn all stuff suddenly off. I do not want to turn off the pic itself, just the peripherials. How can create such mode switching in C?",
     "source": "reddit/pic_programming",
@@ -270,7 +315,7 @@
     "comments_count": 3
   },
   {
-    "id": "q-26e64afa-421a-47fd-95e0-3e9a35506527",
+    "id": "q-4e18b29e-c5e6-4d71-b0fd-2efbf7ca91e8",
     "title": "Strange Files in Mplab X Project",
     "content": "I had start a new project on Mplab X, using another one as a base.\n\nI did open the file of the old one, to be able to use it as an example for the new. I did not modify it at all.\n\nHowever, each time i load MplabX, i am running it on Fedora, whenever it opens the actual project, it keeps loading that file, wich is a .c source file. How can i make Mplab X to forget that unwanted source file?",
     "source": "reddit/pic_programming",
@@ -279,7 +324,7 @@
     "comments_count": 2
   },
   {
-    "id": "q-3750f5ba-7c2f-4726-a5e9-d607c3228d4e",
+    "id": "q-2998c408-3025-4ed0-9a6f-37399f16b1fc",
     "title": "Pic board with menu and several procedures",
     "content": "I am developing a board using a Pic 16f877. \n\nI have some buttons (inputs) and some outputs (leds and/or power transistors.\n\nOne of them is an on-off like switch. Whenever i depress it, some leds shall come on and a procedure awaiting me to depress other button and select between some tasks until i do that and depress \"run\".\n\nI had divide my source code between several different source files, which i have been writing in C language. Each one has a name.\n\nI do belive in C, i can select cyclically  a task by depressing a button asking to read it, something like , please have in mind its and example and not true C code what i'm writing below\n\nIf(!taskbutton)\n\nAsuming\n\nvoid Procedure1(void)\n\n{\n\nstuff to do;\n\n}\n\nvoid Procedure2(void)\n\n{\n\nstuff to do;\n\n}\n\n{\n\nfor(task = 0; task &lt;= 2; task +1)\n\n}\n\nif (task =1)\n\nProcedure1;\n\nProcedure1Led = 1;\n\nChosenProcedure = Procedure1;\n\nelse\n\nProcedure1Led = 0;  \n\n\nif(task = 2)\n\n{\n\nProcedure 2;\n\nProcedure2Led = 1;\n\nChosenProcedure = Procedure2;\n\nelse\n\n}\n\nProcedureLed = 0;\n\nand so on.\n\nHowever the tasks i am writing have no numbers but names. As far as i know, i can not add or substract name strings, just integer numbers. Does exist any manner of accomplishing some sort of push button menu selection able to go from default to the last one and them once the last one has been reached, start over on default?",
     "source": "reddit/pic_programming",
@@ -288,7 +333,7 @@
     "comments_count": 1
   },
   {
-    "id": "q-e905a361-7327-4e82-b6a9-21d0f1c12527",
+    "id": "q-96189a6e-202a-4b35-a4d4-c93b9be9f89e",
     "title": "Easily build your Free XC32 PRO Compiler",
     "content": "I've made a full auto script to easily cross compile xc32 v4.35 for windows to get all the xc32 pro features for free:  \n[https://github.com/nikisalli/Free\\_XC32\\_PRO\\_Compiler/](https://github.com/nikisalli/Free_XC32_PRO_Compiler/)\n\njust follow the instructions and you're ready to compile all the code you want with all the possible optimizations\n\nall the credits for the original scripts go to [https://github.com/ElectricRCAircraftGuy](https://github.com/ElectricRCAircraftGuy) who made the original effort, I just patched the build scripts, fixed some errors and packaged it in a more reproducible build environment.\n\nEnjoy! and fuck microchip :)",
     "source": "reddit/pic_programming",
@@ -297,7 +342,7 @@
     "comments_count": 1
   },
   {
-    "id": "q-f94e9a27-9841-42e5-b0bd-2c0c5daf090b",
+    "id": "q-64906627-80bf-4b67-b097-ef6c1e1ad773",
     "title": "Mplab X 6.20 display issues in Fedora Linux",
     "content": "I am struggling with some bad behaviours with Mplab 6.20.\n\nI know it's not the latest one, but is the last one which allows me to use the Pickit 3 programmer. \n\nI am having a strange issue: whenever i do click in any menu after opening, the menu itself appears down the screen like floating on it alone, and not hanging off the menu bar. If i just open the \"options\" menu and try again, this time it does normally. Does it have any display setting i can fix somewhere?",
     "source": "reddit/pic_programming",
@@ -306,7 +351,7 @@
     "comments_count": 1
   },
   {
-    "id": "q-08ee9372-fdba-4025-b1f9-7f3d3bdaee2c",
+    "id": "q-bff149fd-2a9c-4050-9c8c-6b424d78c368",
     "title": "Does Mplab and / or xc8 support the \"Switch Case\" statement while coding in C?",
     "content": "Does Mplab and / or xc8 support the \"Switch Case\" statement while coding in C?",
     "source": "reddit/pic_programming",
@@ -315,7 +360,7 @@
     "comments_count": 1
   },
   {
-    "id": "q-a9b047e3-7117-490a-b12c-f9515a63394f",
+    "id": "q-5baac564-3529-4614-a6af-9c4a6562a954",
     "title": "Pin to Ground Resistor Value in Pics",
     "content": "I am setting up a new pic project. I do wish to send input pins to ground and then use pushbuttons as a positive signal. When running the pic at 5v, which are the best values for ground resistors and switch to pin ones, to send a \"1\" being 0 by default?",
     "source": "reddit/pic_programming",
@@ -324,7 +369,7 @@
     "comments_count": 4
   },
   {
-    "id": "q-658d58b5-48e8-4ea8-8e44-99a1ec945425",
+    "id": "q-91dc8a38-9b40-488c-8739-9eaf96191ae8",
     "title": "Common Anode Dual Color Led",
     "content": "I am trying to have a dual color led (red and green, no blue) wich happens to have a common positive and two negatives, one for each color. \n\nI do have a PIC wich uses negative as ground as the rest of the circuitry. However i need dual color indication for what i am trying to do and i could get no common cathode leds. Does exist any manner of adapting common anode ones?",
     "source": "reddit/pic_programming",
@@ -333,7 +378,7 @@
     "comments_count": 1
   },
   {
-    "id": "q-68a85af5-21d3-405b-9634-8d6042473836",
+    "id": "q-fe76b026-fcec-4c88-a5e5-ec09835ae04b",
     "title": "About Input Buttons",
     "content": "On my 1st board using a smaller PIC, i did connect a switch between +b and one input pin using a resistor in series with the pin and i got it working or either stop. I did the same with other dip switches but they did not change the behaviour of the IC.\n\nNow i am doing another one using push buttons to be read and change variables before proceeding. As far as i know there seem to be two manners: either a button and resistor in series between +B and input pin or another one where there is a resistor always connected between +B and Input, and then, there is a derivation to a switch or button connected to Ground. \n\nOn the first case, the pins would be theoretically in 0 by default and the switch would turn on (1) the pin; \n\nIn the last case, default would be 1 and Switch or Button would turn it Off (0).\n\ni have several concerns about this:\n\nFirst, if on microchip pics 16fxxx is better or right one or the another;\n\nSecond, if is it enought to try to read pins from IF {} sentences when coding in C or if it does exist any other command to read them and do or stop something;\n\nThird, assuming 5v of power, what value is best for the IC.",
     "source": "reddit/pic_programming",
@@ -342,7 +387,7 @@
     "comments_count": 4
   },
   {
-    "id": "q-b19c644b-734a-49d2-99b9-58fcf423d505",
+    "id": "q-af06fdfd-641d-42ac-9ffa-4c9ef5f39436",
     "title": "Setting default voltage and power on Mplab Ipe 6.20",
     "content": "I am running Mplab 6.20 using a Pickit 3 programmer.I am using it on Fedora Linux, installed as it came from Microchip.\n\nMy real USB voltage is 4.75v, yet each time i use it i do have to set up voltage and power from pickit. I do believe it has a manner of setting a work environment, however i do not know how to set up one as default. Does it have somewhere in my computer a file i can edit , if needed, as root user, and change variables?",
     "source": "reddit/pic_programming",
@@ -351,7 +396,7 @@
     "comments_count": 4
   },
   {
-    "id": "q-2babd510-6b43-47eb-8d07-0ebc21a162fc",
+    "id": "q-77196e7c-3a50-4556-b2a5-956208742e62",
     "title": "PIC vs ESP32?",
     "content": "Hey gang!!!\n\nThis might be a long shot but I'm running out of patience with this project!!\n\nI'm trying to take the output of PIC16c773/sp that normally drives a 16x2 LCD display and wash it through a ESP32 to display on a TFT. \n\nI got the two to talk,  but I'm having problems with timing or frame recognition.  The LCD displays something like PERFORMANCE... but I'm getting things like PFMNCE one time... maybe FOCE the 2nd... and so on.  Never the same and rarely more than a few coherent letters. \n\nIs there a trick to getting the timing aligned between these two? Any hints or wisdom? I am getting characters.. but one of these is either incredibly fast or slow. I can't tell! I don't have a scope,  so no way to read the output beyond what I can see on the ESP32 monitor. \n\nI've already converted it from the 5v output to a 3v input for the ESP32 and I'm getting some chars, so i think there's no issue beyond figuring out the frame or timing, but i might be wrong. \n\nThere are other issues past this, like the data being displayed,  but if i could get the splash screen to translate properly,  I think i could get the rest.\n\nI'm not really familiar with the PIC family, so any help is appreciated. Figured I'd come beg the experts for a little guidance! \n\nThanks!! \n\nEdit: cleaned up the markings and discovered it's actually a 773/SP. Sorry!",
     "source": "reddit/pic_programming",
@@ -360,7 +405,7 @@
     "comments_count": 15
   },
   {
-    "id": "q-3c3a2191-bd0f-430b-badb-abdc96db91fc",
+    "id": "q-118e35df-6033-4d99-8c98-74bb889af871",
     "title": "PIC vs ESP32?",
     "content": "",
     "source": "reddit/pic_programming",
@@ -369,7 +414,7 @@
     "comments_count": 2
   },
   {
-    "id": "q-33de525d-8bb3-4246-a814-a910cbb228c5",
+    "id": "q-871b5cc6-5b82-42ef-9868-e41e309fcf44",
     "title": "Best plugins and tips for MPLAB X IDE v6.20?",
     "content": "Hi everyone,\n\nI\u2019ve just started working with MPLAB X IDE version 6.20 and I\u2019d like to improve my workflow. Are there any must-have plugins or useful extensions you\u2019d recommend?\n\nAlso, if you have any productivity tips, hidden features, or configuration tweaks that make development easier or faster, I\u2019d love to hear them.\n\nThanks in advance :)",
     "source": "reddit/pic_programming",
@@ -378,7 +423,7 @@
     "comments_count": 7
   },
   {
-    "id": "q-09408a5a-9b0f-4e9c-8b6e-abedce0f28a3",
+    "id": "q-cdab9dde-40b1-433b-af74-d400b667adff",
     "title": "Help with schematics",
     "content": "Hello everyone,\n\n  \nI am working on my first project with a PIC micro controller, and I am having trouble figuring out how to wire the connections for the PICkit 5, could anyone tell me if I did this corretly?\n\nI want to make sure I will be able to program the PIC before i order it.\n\nmany thanks!",
     "source": "reddit/pic_programming",
@@ -387,7 +432,7 @@
     "comments_count": 5
   },
   {
-    "id": "q-db10a7b3-7391-40d4-b977-817eda096aac",
+    "id": "q-b9f4a371-9008-4079-966f-316565fa33a7",
     "title": "Mplab X and XC8 optimization in C Language",
     "content": "I had read that the XC8 compiler has several optimization options. Some users like them, some other do not. How can i choose that in Mplab X while developing something for a Pic?",
     "source": "reddit/pic_programming",
@@ -396,7 +441,7 @@
     "comments_count": 3
   },
   {
-    "id": "q-93e127ce-ac0b-4ce8-9dfe-24126f996720",
+    "id": "q-c6c54ea6-e858-40f1-af03-bc26c2312c72",
     "title": "Choosing the right PIC  before starting a project",
     "content": "I had recently completed my first project using an old pic16f819.\n\nI did code it in C, i do not know anything about Assembler.\n\nI tried to read 4 switcheds and use that for choosing what while() run. However, after building the code with mplabx using the xc8 compiler, no matter how hard i try to optimize the code, i just get one subwhile running when i turn on or off only one switch.\n\nI tried to turn on a led using a pin while running them, it did not come on until i connected it into another pin which is always on whenever that while() routine runs.\n\nI tried to vary the timings of what is in that while() trying to pass \\_\\_delay\\_ms(variable) yet it only takes numbers. I tried writing several of them yet i can only run one of them.\n\nI am using xc8 2.50 or 3.00, mplabx 6.20 and pickit3, i can not move towards pickit4 at the moment.\n\nI do have several questions and doubts about this:\n\n1. I had learnt that \\_\\_delay\\_ms is a \"macro\" function and they do not use to take values from a variable. I tried \"%d\", \"%p\" and other operators, yet nothing. I tried a function from other developer which runs \\_\\_delay\\_ms(1ms) as many times as passed, yet it did not work for me on this microcontroller. Does exist any manner of passing variables to it?\n\n2. i could set properly input and output pins, set the clock speed and even name the pins within code. i had 4 pins as input, one of them triggers the while, the other shuts it off and turns of a led. I asked the pic to read how the others are and it seems indifferent to them. Its like i can not have them read by stuff like\n\n\n\n \"if ((pin1 == 1) &amp;&amp; (pin2 == 0)) \n\n{\\_\\_delay\\_ms = x\n\n}.\n\nArduino uses instrucctions as \"pinread and pinwrite\" or something like that, does PiCs have any equivalent from this?\n\nThe other concern i have is : i do wish to read the uptime since turning the IC on and the time the while() comes on pulling the switch; if time difference is less than x time i wish to blink a led one second, if is equal or higher than, then i would like to proceed witth the while, resetting the running time variable.\n\ni do plan to start another project using a pic16f819 wich is what i do have in my mechatronics box, is it pin-compatible with pic16f877?",
     "source": "reddit/pic_programming",
@@ -405,7 +450,7 @@
     "comments_count": 4
   },
   {
-    "id": "q-20902b8e-31a1-4c3d-b0aa-9ca7942cff5d",
+    "id": "q-bdac7f7c-9a6f-4cc1-9f3c-55238a320544",
     "title": "Does \"void DELAY_milliseconds (uint16_t milliseconds)\" read variables?",
     "content": "Does the \"void [DELAY\\_milliseconds](https://onlinedocs.microchip.com/oxy/GUID-3934D5A2-C1FE-4609-B66D-55454D652D9F-en-US-9/Chunk330982260.html#GUID-7009D985-BACF-4B4C-9067-C093DBA124C0) (uint16\\_t milliseconds)\" accept the milliseconds contained in a variable instead of having them hard written into ()?\n\nShould it do, how should it invoke them within ()?",
     "source": "reddit/pic_programming",
@@ -414,7 +459,7 @@
     "comments_count": 0
   },
   {
-    "id": "q-6debc175-8a73-4225-8577-48ccfd79206c",
+    "id": "q-773366e0-0b77-47b5-bf12-cc2897c00434",
     "title": "Trying to set \"_Delay_Ms\" time from a variable before main()",
     "content": "I am writing a firmwae for an old pic, 16f819, trying to turn on and off 3 pins in sequence, looking towards driving a switched reluctance motor.\n\nI got much of the program working well but, i seem to have learnt that \"\\_delay\\_ms()\" instruction only seems to take a number in milisenconds strictly declared between it's brakets. Does it have some sort of capacity for reading the content in miliseconds set by an external variable? Should that be feasible, what type (int, unsigned, long) should i use when declaring up to 1000 miliseconds? ",
     "source": "reddit/pic_programming",
@@ -423,7 +468,7 @@
     "comments_count": 6
   },
   {
-    "id": "q-b415517a-7f32-4a4d-ab23-9261bd18def6",
+    "id": "q-0c794cfa-3602-486c-bfab-b68d95c56fe4",
     "title": "Can't connect to PIC18F4520 on MPLAB X v.6.20",
     "content": "Hello!\n\nI've got some pretty old project to maintain and I have a problem even connecting to the board.\n\nSince I didn't know why (and I've never worked with PIC before), I tried replacing controller and even buying new programmer. Nothing helped.\n\nI even tried the [most basic setup](https://imgur.com/a/a5ie3vw) recently, but I still get the same \"Connection failed\" messages.\n\nProgrammer seems to be ok - IDE detects it and doesn't report any errors. And MCU is new and never programmed before.\n\nI honestly don't know what I'm doing wrong and need help &gt;\\_&lt;",
     "source": "reddit/pic_programming",
@@ -432,7 +477,7 @@
     "comments_count": 5
   },
   {
-    "id": "q-316cd58e-f2e5-4dee-aa85-26f22e728889",
+    "id": "q-e9050b66-5ef5-4cfa-91b5-d49ba7d0538e",
     "title": "Programming a composite hid device through old mplab on pic18f4550",
     "content": "Alright, so as the title suggests, I've got everything down. I've been trying to code my project to be able to act as an hid device for mouse, keyboard and joystick. The issue is - I can't seem to find a way to stick all of these three into a one, fully working HEX file.\n\nAt this point I have 3 HEX files, all working as intended for separate devices on my board, however, I want to make all of them work in a single HEX file through DIP switches(for example, dip state1 is mouse, state 2 is keyboard, state 3 is joystick).\n\nI've made a copy of the mouse hid project from picdemfsusb and remapped it to my own device, and I am trying to cater that to make it work as all three at once. My PC does recognize them all 3, viewed through USBTreeView, so that part seems fine.\n\nThe problem begins here - on dip state 1, the mouse movements work as I want them to, which is fine, however, once gotten into dip state 2, the keyboard does not want to produce simple outputs such as a,b,c,d,e on the screen, though the LED's do light up on-button-press accordingly. I've been having trouble to make at least 2 of these devices work on this file.\n\nIf needed, I can provide the full source code to it and the mapping system. Using the mplab8.92 and c18 compiler, since the source files already have the compiled software for it.\n\nIf anyone has any idea what might be wrong - please let me know. I'll provide as much details as I possibly can at this point.\n\nI have to know if this is even remotely possible to achieve in a singular HEX file, because I've been at this project for a month, and my finals are in 12 days.\n\nP.s. - the singular keyboard - hid does work fine, it just doesn't want to fully produce any output on screen on the composite project.",
     "source": "reddit/pic_programming",
@@ -441,7 +486,7 @@
     "comments_count": 2
   },
   {
-    "id": "q-26d63066-a88c-4e2d-a1c7-fa22d99c05ef",
+    "id": "q-59d693c7-bfdb-40e7-900c-d6f60af56c51",
     "title": "Where to find pic16f15276.inc file?",
     "content": "I am trying to learn pic assembly with the pic16f15276 chip, on the curiosity nano board.\n\nHowever, I am having a lot of trouble finding the .inc file that everyone references. I'm using mplab x 6.25, and have spend some time rummaging through all the folders with nothing of worth to show for it.\n\n  \nAny help at all would be appreciated",
     "source": "reddit/pic_programming",

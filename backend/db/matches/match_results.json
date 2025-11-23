@@ -1,0 +1,2587 @@
+[
+  {
+    "query_id": "q-001",
+    "team_id": "t-embedded-fw",
+    "score": 0.41185040507658305,
+    "ranking": [
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.41185040507658305
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.3043340164522702
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.20177317069331768
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.16273439307977436
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.1515892546793014
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.09722263787534588
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.06657106462213472
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.00599984915460293
+      }
+    ]
+  },
+  {
+    "query_id": "q-002",
+    "team_id": "t-hw-board",
+    "score": 0.37337733723557737,
+    "ranking": [
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.37337733723557737
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.372685304089349
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.33898435851330494
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.13103534988979632
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.1160793812241016
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.0896150631095535
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.08894531289085168
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.05336644220168672
+      }
+    ]
+  },
+  {
+    "query_id": "q-003",
+    "team_id": "t-mplab-tools",
+    "score": 0.5127570252900566,
+    "ranking": [
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.5127570252900566
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.34477919701318843
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.25665402680294547
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.1842010263219406
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.16237687971121556
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.08474132765002024
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.0697892321710572
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.009626289540923632
+      }
+    ]
+  },
+  {
+    "query_id": "q-004",
+    "team_id": "t-hw-board",
+    "score": 0.18288246850748943,
+    "ranking": [
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.18288246850748943
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.047494567047713
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.03362750792910105
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.028540182713874637
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.003559975810490603
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": -0.012381321843778884
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": -0.04873751429492014
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": -0.05038848707491524
+      }
+    ]
+  },
+  {
+    "query_id": "q-005",
+    "team_id": "t-iot-edge",
+    "score": 0.5450778342930847,
+    "ranking": [
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.5450778342930847
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.32869356718780063
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.3268950609329134
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.2004314290046325
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.16041653534958758
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.15355252053287044
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.08653009941381062
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.05198970246748632
+      }
+    ]
+  },
+  {
+    "query_id": "q-0967a3dc-8b94-4310-8a86-1981f5f644e9",
+    "team_id": "t-embedded-fw",
+    "score": 0.3492427270426926,
+    "ranking": [
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.3492427270426926
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.31951001300104187
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.21735752818635776
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.18113207997316444
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.15707534858229308
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.10245722715964165
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.04692977888827981
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": -0.009622426033609608
+      }
+    ]
+  },
+  {
+    "query_id": "q-921637f7-e8ff-4aed-a27f-fe06722f2dec",
+    "team_id": "t-embedded-fw",
+    "score": 0.35310095814614734,
+    "ranking": [
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.35310095814614734
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.3113611036086313
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.2419900791398863
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.20018636119900957
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.15114860793399615
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.051358010271686
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": -0.014985127768206622
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": -0.04379455940903192
+      }
+    ]
+  },
+  {
+    "query_id": "q-23a20b68-95d4-4efb-be4b-07f07a491b40",
+    "team_id": "t-embedded-fw",
+    "score": 0.42958810656866425,
+    "ranking": [
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.42958810656866425
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.3553912653557936
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.34583382661353956
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.2108444220918254
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.15333295288066587
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.1012463714507194
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.06349190149755167
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.0011601221810656468
+      }
+    ]
+  },
+  {
+    "query_id": "q-838e3d95-7268-4566-b7d5-ae2257d72408",
+    "team_id": "t-embedded-fw",
+    "score": 0.2977178607946366,
+    "ranking": [
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.2977178607946366
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.2861730499681159
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.2602369209795356
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.22547285606021833
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.19929422241683928
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.1765324901097935
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.1465726808456028
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.09407139393376807
+      }
+    ]
+  },
+  {
+    "query_id": "q-32e24d40-cb80-44da-b4e1-76392fbf47dd",
+    "team_id": "t-embedded-fw",
+    "score": 0.22004331200830643,
+    "ranking": [
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.22004331200830643
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.21430406774541408
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.19823791214631845
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.13279114778947043
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.0626276833058591
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.041471461063917234
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.023260113323403678
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": -0.025912122554051193
+      }
+    ]
+  },
+  {
+    "query_id": "q-133ef5d8-040f-47ed-88e5-5558177caabc",
+    "team_id": "t-mplab-tools",
+    "score": 0.39849702486331495,
+    "ranking": [
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.39849702486331495
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.17429858114973198
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.1245336675937636
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.0403325491206865
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.0173381485450601
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": -0.052181730152295415
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": -0.05538512331028615
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": -0.06644055114147089
+      }
+    ]
+  },
+  {
+    "query_id": "q-4b1e5e13-96b7-4d7e-a1b5-bd384d7998f5",
+    "team_id": "t-hw-board",
+    "score": 0.2331400605466594,
+    "ranking": [
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.2331400605466594
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.21433790098313008
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.20178985807220853
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.18213337251265022
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.15227079288156123
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.12604978033232123
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.12273237896664292
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.11948806957335249
+      }
+    ]
+  },
+  {
+    "query_id": "q-fda753a2-386d-4c5f-80bb-f3f3396d2fcd",
+    "team_id": "t-embedded-fw",
+    "score": 0.4369670508895864,
+    "ranking": [
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.4369670508895864
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.30958166839780404
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.24182082335824345
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.20866362732249266
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.18916143085880616
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.18864988788931414
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.1801452987779617
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.16802903426629484
+      }
+    ]
+  },
+  {
+    "query_id": "q-3815c1e0-080f-4765-b9cc-03e6dfa9052c",
+    "team_id": "t-mplab-tools",
+    "score": 0.516863939579186,
+    "ranking": [
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.516863939579186
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.29450601675728993
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.17830977574868256
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.121571737832571
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.08164785701080886
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.05051551860748051
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": -0.0058314618925448996
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": -0.024829706312163292
+      }
+    ]
+  },
+  {
+    "query_id": "q-5d18aeb1-1df4-497e-bd86-08ed0e2ae28b",
+    "team_id": "t-mplab-tools",
+    "score": 0.36852477454617694,
+    "ranking": [
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.36852477454617694
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.26424495983273855
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.16799138260436358
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.16329375409390415
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.11358778757930206
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.11136789229652731
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.07954033122800792
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.0727455612507133
+      }
+    ]
+  },
+  {
+    "query_id": "q-302896bd-1136-4d59-ad2b-8266dacd804a",
+    "team_id": "t-hw-board",
+    "score": 0.19848750368549614,
+    "ranking": [
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.19848750368549614
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.1269970054222014
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.11503666983912539
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.10471020829498681
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.08188040771764825
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.07173004871193918
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": -0.008660846023261186
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": -0.03622017406574926
+      }
+    ]
+  },
+  {
+    "query_id": "q-bc608191-3bfd-4cae-9d38-b3012528f1c3",
+    "team_id": "t-hw-board",
+    "score": 0.25651207932668146,
+    "ranking": [
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.25651207932668146
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.03291484070355471
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": -0.012460405323474304
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": -0.013424299609583686
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": -0.015004877569447003
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": -0.03980135739828496
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": -0.053467991823645526
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": -0.058742637072980296
+      }
+    ]
+  },
+  {
+    "query_id": "q-91a89f1b-46f5-4f2c-be7b-bceb778dae1e",
+    "team_id": "t-hw-board",
+    "score": 0.28085578859046273,
+    "ranking": [
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.28085578859046273
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.20300184680663008
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.15987788351781881
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.1468349492451693
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.14099226836779943
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.12807823677773897
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.07134922739800773
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.00041210178477340935
+      }
+    ]
+  },
+  {
+    "query_id": "q-32f46a51-dddf-4c18-ad28-3e087bdffa7b",
+    "team_id": "t-mplab-tools",
+    "score": 0.47019472948758817,
+    "ranking": [
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.47019472948758817
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.2386125750507498
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.19824611715180102
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.18640698663528601
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.13406493441176875
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.11095872451126912
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.05667550156348491
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": -0.05681618454078095
+      }
+    ]
+  },
+  {
+    "query_id": "q-fbfaae22-6e0b-4026-b307-570a3145dd32",
+    "team_id": "t-embedded-fw",
+    "score": 0.291258764081277,
+    "ranking": [
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.291258764081277
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.28350946514070746
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.2627780713993456
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.13166682308135244
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.11077160634194268
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.09940060613388489
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.048495294409104384
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": -0.025016455879216866
+      }
+    ]
+  },
+  {
+    "query_id": "q-ad008b5e-6657-4d94-b625-e24a0d64cdc9",
+    "team_id": "t-iot-edge",
+    "score": 0.5308235406484484,
+    "ranking": [
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.5308235406484484
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.3335201328598676
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.3048825433174197
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.22339478719365177
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.17074123770904395
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.15959212926273766
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.15113438152348732
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.04370264714150281
+      }
+    ]
+  },
+  {
+    "query_id": "q-1e768f37-4ad0-4421-96f9-dd42b14627d3",
+    "team_id": "t-mplab-tools",
+    "score": 0.6719311803014331,
+    "ranking": [
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.6719311803014331
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.6698789639755984
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.3628666276950191
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.291776201372944
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.2871069732601892
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.2641486855683052
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.23753113435712953
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.23290495915283524
+      }
+    ]
+  },
+  {
+    "query_id": "q-5b3f74c8-fec1-4d7a-bcd7-333265470c2f",
+    "team_id": "t-mplab-tools",
+    "score": 0.39330097836990546,
+    "ranking": [
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.39330097836990546
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.3147046114286869
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.22883455758558274
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.18155246095481092
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.1367808779607837
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.12891783113556768
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.08517758790834126
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": -0.016803030165959867
+      }
+    ]
+  },
+  {
+    "query_id": "q-1c315228-0e74-40c1-91b2-2713bec504d8",
+    "team_id": "t-mplab-tools",
+    "score": 0.4516096973752515,
+    "ranking": [
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.4516096973752515
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.4400215841837086
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.36700202968835577
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.19732274324265314
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.17961344138521484
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.1546633721759105
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.15354700928735157
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.08652697704317822
+      }
+    ]
+  },
+  {
+    "query_id": "q-264d5e5e-9633-4bb6-a776-73edf44d349d",
+    "team_id": "t-mplab-tools",
+    "score": 0.4394736132529137,
+    "ranking": [
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.4394736132529137
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.4101447825155627
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.3541146847661904
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.23388521612624238
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.16068774878106662
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.1542761061363992
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.13356762537714062
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.049226243559066046
+      }
+    ]
+  },
+  {
+    "query_id": "q-9269eeeb-006d-4ba3-8ff2-3076ecc5308b",
+    "team_id": "t-embedded-fw",
+    "score": 0.08541764042738356,
+    "ranking": [
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.08541764042738356
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.08034201650789016
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.08027095479357571
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.03490717815856962
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.03239532526968451
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.018135428347882315
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.007280844001793367
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": -0.016517551374813387
+      }
+    ]
+  },
+  {
+    "query_id": "q-f2cb1974-ad31-41af-bb99-d39e9471026b",
+    "team_id": "t-embedded-fw",
+    "score": 0.2675003856000989,
+    "ranking": [
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.2675003856000989
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.16140942283225246
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.13657506239109785
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.1346679430065594
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.10655599583316626
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.08315508484578851
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.07275929564215569
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.055896410768531614
+      }
+    ]
+  },
+  {
+    "query_id": "q-01787da0-bdf0-43c5-b1de-c1485f7bd005",
+    "team_id": "t-mplab-tools",
+    "score": 0.5418260719945134,
+    "ranking": [
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.5418260719945134
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.3992346354475191
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.32587194680183484
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.26510705882200275
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.22893806860642638
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.19948421237546593
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.13884659140553673
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.02637440489512481
+      }
+    ]
+  },
+  {
+    "query_id": "q-9c63e2b0-8c0e-44fe-bdfb-169eb4b104cd",
+    "team_id": "t-mplab-tools",
+    "score": 0.30430338738808355,
+    "ranking": [
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.30430338738808355
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.23786384566524235
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.20938995119895012
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.1838589532391453
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.14411715627227784
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.10844430383963698
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.05173692458547639
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": -0.011740471058097772
+      }
+    ]
+  },
+  {
+    "query_id": "q-a88211cd-87ce-4ce9-9f11-70b5e7e60c46",
+    "team_id": "t-mplab-tools",
+    "score": 0.45900803597468925,
+    "ranking": [
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.45900803597468925
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.45318939459393004
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.41068510532909025
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.2865095726387296
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.2762738640500223
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.2666834911064649
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.14706284586893134
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.03922025539963268
+      }
+    ]
+  },
+  {
+    "query_id": "q-808635d0-99ea-4a90-ae27-d84645be0d06",
+    "team_id": "t-embedded-fw",
+    "score": 0.3492427270426926,
+    "ranking": [
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.3492427270426926
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.31951001300104187
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.21735752818635776
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.18113207997316444
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.15707534858229308
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.10245722715964165
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.04692977888827981
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": -0.009622426033609608
+      }
+    ]
+  },
+  {
+    "query_id": "q-85a342da-55b3-4856-ab1b-411eea81587f",
+    "team_id": "t-embedded-fw",
+    "score": 0.35310095814614734,
+    "ranking": [
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.35310095814614734
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.3113611036086313
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.2419900791398863
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.20018636119900957
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.15114860793399615
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.051358010271686
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": -0.014985127768206622
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": -0.04379455940903192
+      }
+    ]
+  },
+  {
+    "query_id": "q-65969992-b8f5-4f67-ab42-9f2f039e385e",
+    "team_id": "t-embedded-fw",
+    "score": 0.42958810656866425,
+    "ranking": [
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.42958810656866425
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.3553912653557936
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.34583382661353956
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.2108444220918254
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.15333295288066587
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.1012463714507194
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.06349190149755167
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.0011601221810656468
+      }
+    ]
+  },
+  {
+    "query_id": "q-98507ecb-fed4-4984-b9f2-eb60cb46832a",
+    "team_id": "t-embedded-fw",
+    "score": 0.2977178607946366,
+    "ranking": [
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.2977178607946366
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.2861730499681159
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.2602369209795356
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.22547285606021833
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.19929422241683928
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.1765324901097935
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.1465726808456028
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.09407139393376807
+      }
+    ]
+  },
+  {
+    "query_id": "q-86521260-67cb-4c47-b937-e8400163ca09",
+    "team_id": "t-embedded-fw",
+    "score": 0.22004331200830643,
+    "ranking": [
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.22004331200830643
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.21430406774541408
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.19823791214631845
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.13279114778947043
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.0626276833058591
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.041471461063917234
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.023260113323403678
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": -0.025912122554051193
+      }
+    ]
+  },
+  {
+    "query_id": "q-4e18b29e-c5e6-4d71-b0fd-2efbf7ca91e8",
+    "team_id": "t-mplab-tools",
+    "score": 0.39849702486331495,
+    "ranking": [
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.39849702486331495
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.17429858114973198
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.1245336675937636
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.0403325491206865
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.0173381485450601
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": -0.052181730152295415
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": -0.05538512331028615
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": -0.06644055114147089
+      }
+    ]
+  },
+  {
+    "query_id": "q-2998c408-3025-4ed0-9a6f-37399f16b1fc",
+    "team_id": "t-hw-board",
+    "score": 0.2331400605466594,
+    "ranking": [
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.2331400605466594
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.21433790098313008
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.20178985807220853
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.18213337251265022
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.15227079288156123
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.12604978033232123
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.12273237896664292
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.11948806957335249
+      }
+    ]
+  },
+  {
+    "query_id": "q-96189a6e-202a-4b35-a4d4-c93b9be9f89e",
+    "team_id": "t-embedded-fw",
+    "score": 0.4369670508895864,
+    "ranking": [
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.4369670508895864
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.30958166839780404
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.24182082335824345
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.20866362732249266
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.18916143085880616
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.18864988788931414
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.1801452987779617
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.16802903426629484
+      }
+    ]
+  },
+  {
+    "query_id": "q-64906627-80bf-4b67-b097-ef6c1e1ad773",
+    "team_id": "t-mplab-tools",
+    "score": 0.516863939579186,
+    "ranking": [
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.516863939579186
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.29450601675728993
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.17830977574868256
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.121571737832571
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.08164785701080886
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.05051551860748051
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": -0.0058314618925448996
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": -0.024829706312163292
+      }
+    ]
+  },
+  {
+    "query_id": "q-bff149fd-2a9c-4050-9c8c-6b424d78c368",
+    "team_id": "t-mplab-tools",
+    "score": 0.36852477454617694,
+    "ranking": [
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.36852477454617694
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.26424495983273855
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.16799138260436358
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.16329375409390415
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.11358778757930206
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.11136789229652731
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.07954033122800792
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.0727455612507133
+      }
+    ]
+  },
+  {
+    "query_id": "q-5baac564-3529-4614-a6af-9c4a6562a954",
+    "team_id": "t-hw-board",
+    "score": 0.19848750368549614,
+    "ranking": [
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.19848750368549614
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.1269970054222014
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.11503666983912539
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.10471020829498681
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.08188040771764825
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.07173004871193918
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": -0.008660846023261186
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": -0.03622017406574926
+      }
+    ]
+  },
+  {
+    "query_id": "q-91dc8a38-9b40-488c-8739-9eaf96191ae8",
+    "team_id": "t-hw-board",
+    "score": 0.25651207932668146,
+    "ranking": [
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.25651207932668146
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.03291484070355471
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": -0.012460405323474304
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": -0.013424299609583686
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": -0.015004877569447003
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": -0.03980135739828496
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": -0.053467991823645526
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": -0.058742637072980296
+      }
+    ]
+  },
+  {
+    "query_id": "q-fe76b026-fcec-4c88-a5e5-ec09835ae04b",
+    "team_id": "t-hw-board",
+    "score": 0.28085578859046273,
+    "ranking": [
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.28085578859046273
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.20300184680663008
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.15987788351781881
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.1468349492451693
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.14099226836779943
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.12807823677773897
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.07134922739800773
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.00041210178477340935
+      }
+    ]
+  },
+  {
+    "query_id": "q-af06fdfd-641d-42ac-9ffa-4c9ef5f39436",
+    "team_id": "t-mplab-tools",
+    "score": 0.47019472948758817,
+    "ranking": [
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.47019472948758817
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.2386125750507498
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.19824611715180102
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.18640698663528601
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.13406493441176875
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.11095872451126912
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.05667550156348491
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": -0.05681618454078095
+      }
+    ]
+  },
+  {
+    "query_id": "q-77196e7c-3a50-4556-b2a5-956208742e62",
+    "team_id": "t-embedded-fw",
+    "score": 0.291258764081277,
+    "ranking": [
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.291258764081277
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.28350946514070746
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.2627780713993456
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.13166682308135244
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.11077160634194268
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.09940060613388489
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.048495294409104384
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": -0.025016455879216866
+      }
+    ]
+  },
+  {
+    "query_id": "q-118e35df-6033-4d99-8c98-74bb889af871",
+    "team_id": "t-iot-edge",
+    "score": 0.5308235406484484,
+    "ranking": [
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.5308235406484484
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.3335201328598676
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.3048825433174197
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.22339478719365177
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.17074123770904395
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.15959212926273766
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.15113438152348732
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.04370264714150281
+      }
+    ]
+  },
+  {
+    "query_id": "q-871b5cc6-5b82-42ef-9868-e41e309fcf44",
+    "team_id": "t-mplab-tools",
+    "score": 0.6719311803014331,
+    "ranking": [
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.6719311803014331
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.6698789639755984
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.3628666276950191
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.291776201372944
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.2871069732601892
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.2641486855683052
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.23753113435712953
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.23290495915283524
+      }
+    ]
+  },
+  {
+    "query_id": "q-cdab9dde-40b1-433b-af74-d400b667adff",
+    "team_id": "t-mplab-tools",
+    "score": 0.39330097836990546,
+    "ranking": [
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.39330097836990546
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.3147046114286869
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.22883455758558274
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.18155246095481092
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.1367808779607837
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.12891783113556768
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.08517758790834126
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": -0.016803030165959867
+      }
+    ]
+  },
+  {
+    "query_id": "q-b9f4a371-9008-4079-966f-316565fa33a7",
+    "team_id": "t-mplab-tools",
+    "score": 0.4516096973752515,
+    "ranking": [
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.4516096973752515
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.4400215841837086
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.36700202968835577
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.19732274324265314
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.17961344138521484
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.1546633721759105
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.15354700928735157
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.08652697704317822
+      }
+    ]
+  },
+  {
+    "query_id": "q-c6c54ea6-e858-40f1-af03-bc26c2312c72",
+    "team_id": "t-mplab-tools",
+    "score": 0.4394736132529137,
+    "ranking": [
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.4394736132529137
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.4101447825155627
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.3541146847661904
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.23388521612624238
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.16068774878106662
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.1542761061363992
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.13356762537714062
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.049226243559066046
+      }
+    ]
+  },
+  {
+    "query_id": "q-bdac7f7c-9a6f-4cc1-9f3c-55238a320544",
+    "team_id": "t-embedded-fw",
+    "score": 0.08541764042738356,
+    "ranking": [
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.08541764042738356
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.08034201650789016
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.08027095479357571
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.03490717815856962
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.03239532526968451
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.018135428347882315
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.007280844001793367
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": -0.016517551374813387
+      }
+    ]
+  },
+  {
+    "query_id": "q-773366e0-0b77-47b5-bf12-cc2897c00434",
+    "team_id": "t-embedded-fw",
+    "score": 0.2675003856000989,
+    "ranking": [
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.2675003856000989
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.16140942283225246
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.13657506239109785
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.1346679430065594
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.10655599583316626
+      },
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.08315508484578851
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.07275929564215569
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.055896410768531614
+      }
+    ]
+  },
+  {
+    "query_id": "q-0c794cfa-3602-486c-bfab-b68d95c56fe4",
+    "team_id": "t-mplab-tools",
+    "score": 0.5418260719945134,
+    "ranking": [
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.5418260719945134
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.3992346354475191
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.32587194680183484
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.26510705882200275
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.22893806860642638
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.19948421237546593
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.13884659140553673
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.02637440489512481
+      }
+    ]
+  },
+  {
+    "query_id": "q-e9050b66-5ef5-4cfa-91b5-d49ba7d0538e",
+    "team_id": "t-mplab-tools",
+    "score": 0.30430338738808355,
+    "ranking": [
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.30430338738808355
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.23786384566524235
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.20938995119895012
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.1838589532391453
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.14411715627227784
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.10844430383963698
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.05173692458547639
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": -0.011740471058097772
+      }
+    ]
+  },
+  {
+    "query_id": "q-59d693c7-bfdb-40e7-900c-d6f60af56c51",
+    "team_id": "t-mplab-tools",
+    "score": 0.45900803597468925,
+    "ranking": [
+      {
+        "team_id": "t-mplab-tools",
+        "team_name": "MPLAB Tools Team",
+        "score": 0.45900803597468925
+      },
+      {
+        "team_id": "t-hw-board",
+        "team_name": "Hardware Board Design Team",
+        "score": 0.45318939459393004
+      },
+      {
+        "team_id": "t-embedded-fw",
+        "team_name": "Embedded Firmware Team",
+        "score": 0.41068510532909025
+      },
+      {
+        "team_id": "t-ui-tools",
+        "team_name": "Tools & UI Integration Team",
+        "score": 0.2865095726387296
+      },
+      {
+        "team_id": "t-linux-drivers",
+        "team_name": "Linux Embedded Drivers Team",
+        "score": 0.2762738640500223
+      },
+      {
+        "team_id": "t-power-electronics",
+        "team_name": "Power Electronics & MCU Controls Team",
+        "score": 0.2666834911064649
+      },
+      {
+        "team_id": "t-iot-edge",
+        "team_name": "IoT & Edge Systems Team",
+        "score": 0.14706284586893134
+      },
+      {
+        "team_id": "t-qa-automation",
+        "team_name": "Automation QA Team",
+        "score": 0.03922025539963268
+      }
+    ]
+  }
+]

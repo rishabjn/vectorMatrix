@@ -6,18 +6,28 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from sentence_transformers import SentenceTransformer
 import numpy as np
+# from scripts.reprocess_all import run_reprocess_pipeline
 
+# # After saving team or query:
+# run_reprocess_pipeline()
 # -------------------------------------------------
 # Paths & Setup
 # -------------------------------------------------
+
 BASE = Path(__file__).resolve().parent
 
-DB_FILE = BASE / "teams_details.json"
-PROCESSED_FILE = BASE / "team_processed_details.json"
+DB_TEAMS_DIR = BASE / "db" / "teams"
+DB_QUERIES_DIR = BASE / "db" / "queries"
+DB_MATCH_DIR = BASE / "db" / "matches"
 
-QUERIES_RAW_FILE = BASE / "queries_raw.json"
-QUERIES_PROCESSED_FILE = BASE / "queries_processed.json"
-MATCH_RESULTS_FILE = BASE / "match_results.json"
+DB_FILE = DB_TEAMS_DIR / "teams_details.json"
+PROCESSED_FILE = DB_TEAMS_DIR / "team_processed_details.json"
+
+QUERIES_RAW_FILE = DB_QUERIES_DIR / "queries_raw.json"
+QUERIES_PROCESSED_FILE = DB_QUERIES_DIR / "queries_processed.json"
+
+MATCH_RESULTS_FILE = DB_MATCH_DIR / "match_results.json"
+
 
 LOCK = threading.Lock()
 
@@ -340,6 +350,11 @@ def health():
 # MAIN
 # -------------------------------------------------
 if __name__ == "__main__":
+    # create directories if missing
+    DB_TEAMS_DIR.mkdir(parents=True, exist_ok=True)
+    DB_QUERIES_DIR.mkdir(parents=True, exist_ok=True)
+    DB_MATCH_DIR.mkdir(parents=True, exist_ok=True)
+
     for p in [
         DB_FILE,
         PROCESSED_FILE,
@@ -351,3 +366,4 @@ if __name__ == "__main__":
             p.write_text("[]")
 
     app.run(debug=True)
+

@@ -1,0 +1,98 @@
+[
+  {
+    "id": "t-embedded-fw",
+    "full_name": "Rahul Verma",
+    "email": "rahul.verma@company.com",
+    "team_name": "Embedded Firmware Team",
+    "manager_name": "Anita Sharma",
+    "documents": [
+      "PIC16F877 Firmware Guide",
+      "XC8 Compiler Configurations",
+      "Microcontroller Low-Power Drivers"
+    ]
+  },
+  {
+    "id": "t-mplab-tools",
+    "full_name": "Suresh Nambiar",
+    "email": "suresh.nambiar@company.com",
+    "team_name": "MPLAB Tools Team",
+    "manager_name": "Vishal Kumar",
+    "documents": [
+      "MPLAB X IDE Debugging Manual",
+      "ICD4 Troubleshooting Guide",
+      "PICKit4 Programmer Notes"
+    ]
+  },
+  {
+    "id": "t-hw-board",
+    "full_name": "Neha Patel",
+    "email": "neha.patel@company.com",
+    "team_name": "Hardware Board Design Team",
+    "manager_name": "Arvind Rao",
+    "documents": [
+      "Schematics for PIC16 Family",
+      "Dual-Color LED Driver",
+      "PCB Layout Checklist"
+    ]
+  },
+  {
+    "id": "t-qa-automation",
+    "full_name": "Karan Singh",
+    "email": "karan.singh@company.com",
+    "team_name": "Automation QA Team",
+    "manager_name": "Priya Das",
+    "documents": [
+      "Test Automation Framework",
+      "Firmware Regression Scripts",
+      "Unit Testing Strategies"
+    ]
+  },
+  {
+    "id": "t-iot-edge",
+    "full_name": "Zoya Khan",
+    "email": "zoya.khan@company.com",
+    "team_name": "IoT & Edge Systems Team",
+    "manager_name": "Manish Gupta",
+    "documents": [
+      "ESP32 vs PIC Comparison",
+      "Edge Sensor Calibration",
+      "Wireless Comms Stack"
+    ]
+  },
+  {
+    "id": "t-linux-drivers",
+    "full_name": "Harish Menon",
+    "email": "harish.menon@company.com",
+    "team_name": "Linux Embedded Drivers Team",
+    "manager_name": "Sneha Raj",
+    "documents": [
+      "Linux GPIO Driver Samples",
+      "Kernel Module Templates",
+      "I2C/SPI Communication Layers"
+    ]
+  },
+  {
+    "id": "t-power-electronics",
+    "full_name": "Mehul Jain",
+    "email": "mehul.jain@company.com",
+    "team_name": "Power Electronics & MCU Controls Team",
+    "manager_name": "Sunil Sharma",
+    "documents": [
+      "PIC PWM Examples",
+      "Brushless Motor Control",
+      "Buck Converter Firmware"
+    ]
+  },
+  {
+    "id": "t-ui-tools",
+    "full_name": "Anupama Roy",
+    "email": "anupama.roy@company.com",
+    "team_name": "Tools & UI Integration Team",
+    "manager_name": "Rajeev Mehta",
+    "documents": [
+      "MPLAB Plugin Development",
+      "GUI Build Tools",
+      "IDE Rendering Performance Notes"
+    ]
+  }
+]
